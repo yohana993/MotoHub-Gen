@@ -28,7 +28,7 @@
 .seccion-acerca {
   position: relative;
   padding: 80px 20px;
-  background-image: url(/src/assets/images/cascos.jpg);
+  background-image: url(../assets/images/cascos.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

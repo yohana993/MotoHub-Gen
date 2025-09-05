@@ -42,7 +42,7 @@ body {
   height: 600px;
   padding: 80px 20px;
   position: relative;
-  background-image: url(/src/assets/images/hero4.jpg);
+  background-image: url(../assets/images/herohome.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
