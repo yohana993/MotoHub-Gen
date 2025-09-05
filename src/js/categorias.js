@@ -45,7 +45,7 @@ function showCategoryBanner(category) {
     bannerContainer.innerHTML = ''; // limpiar antes
 
     // Lista de categorías válidas
-    const validCategories = ["motos", "cascos", "accesorios", "botas"];
+    const validCategories = ["motos", "cascos", "accesorios", "botas", "chaquetas","todo"];
 
     if (category && category !== "all" && validCategories.includes(category.toLowerCase())) {
         const img = document.createElement('img');
