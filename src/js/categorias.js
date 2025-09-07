@@ -37,38 +37,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 🟢 Banner dinámico según categoría
-    // 🟢 Banner dinámico según categoría (motos, cascos, accesorios, botas)
-function showCategoryBanner(category) {
-    const bannerContainer = document.getElementById('category-banner');
-    if (!bannerContainer) return;
+    function showCategoryBanner(category) {
+        const bannerContainer = document.getElementById('category-banner');
+        if (!bannerContainer) return;
 
-    bannerContainer.innerHTML = ''; // limpiar antes
+        bannerContainer.innerHTML = ''; // limpiar antes
 
-    // Lista de categorías válidas
-    const validCategories = ["motos", "cascos", "accesorios", "botas", "chaquetas","todo"];
+        const validCategories = ["motos", "cascos", "accesorios", "botas", "chaquetas", "todo"];
+        const cat = (category || "todo").toLowerCase();
 
-    if (category && category !== "all" && validCategories.includes(category.toLowerCase())) {
-        const img = document.createElement('img');
-        img.src = `/src/assets/banners/${category.toLowerCase()}.png`; // ejemplo: botas.png
-        img.alt = `Sección ${category}`;
-        img.classList.add('banner-img');
-        bannerContainer.appendChild(img);
-    } else if (category === "all" || category === "todo") {
-        const img = document.createElement('img');
-       // imagen general para "todo"
-        img.alt = "Todos los productos";
-        img.classList.add('banner-img');
-        bannerContainer.appendChild(img);
+        if (validCategories.includes(cat)) {
+            const img = document.createElement('img');
+            img.src = `/src/assets/banners/${cat}.png`; // ejemplo: motos.png
+            img.alt = `Sección ${cat}`;
+            img.classList.add('banner-img');
+            bannerContainer.appendChild(img);
+        }
     }
-}
 
-
-    // Cargar productos con filtro
+    // 🟢 Cargar productos con filtro
     function loadProducts(category = "all") {
         const products = getProducts();
         productGrid.innerHTML = '';
 
-        const filtered = category === "all"
+        const filtered = (category === "all" || category === "todo")
             ? products
             : products.filter(p => p.category && p.category.toLowerCase() === category.toLowerCase());
 
@@ -97,7 +89,7 @@ function showCategoryBanner(category) {
             const name = productNameInput.value.trim();
             const description = productDescriptionInput.value.trim();
             const price = parseFloat(priceInput.value.trim());
-            const category = categoryInput.value.trim();
+            const category = categoryInput.value.trim().toLowerCase(); // 👈 guardamos normalizado
             const brand = brandInput.value.trim();
             const gender = genderInput.value.trim();
             const image = createImageInput.value.trim();
@@ -157,8 +149,6 @@ function showCategoryBanner(category) {
         });
     }
 
-   
-
     // 🚀 Al cargar: revisar si viene ?cat= en la URL
     const params = new URLSearchParams(window.location.search);
     const categoryParam = params.get("cat");
@@ -168,4 +158,14 @@ function showCategoryBanner(category) {
     } else {
         loadProducts();
     }
+
+    // 🟢 Capturar clics en categorías del menú
+    const categoryLinks = document.querySelectorAll('#category-list a');
+    categoryLinks.forEach(link => {
+      link.addEventListener("click", function(e) {
+        e.preventDefault();
+        const category = this.getAttribute("data-category");
+        loadProducts(category);
+      });
+    });
 });
