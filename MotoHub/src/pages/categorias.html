@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Categorías</title>
-  <link rel="stylesheet" href="../css/navbar.css">
-  <link rel="stylesheet" href="/src/css/base.css" >
-  <link rel="stylesheet" href="../css/carrito.css">
   <link rel="stylesheet" href="../css/categorias.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/base.css">
+
 </head>
 <body>
   <div class="seccion-nav">
@@ -22,11 +22,10 @@
     </label>
     <nav class="navbar">
         <ul class="nav-menu" id="nav-menu">
-            <li><a href="./Home.html">Inicio</a></li>
-            <li><a href="" class="active">Catálogo</a></li>
-            <li><a href="./acercaNosotros.html">Servicios</a></li>
-            <li><a href="./Contactenos.html">Contacto</a></li>
-            <li><a href="./acercaNosotros.html">Acerca de</a></li>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#" class="active">Catálogo</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Acerca de</a></li>
         </ul>
     </nav>
     <div class="">
@@ -38,31 +37,52 @@
         </button>
     </div>
     </div>
+
   <section class="banner-video">
-  <video autoplay muted loop playsinline class="banner-video-bg">
-    <source src="../assets/videos/moto.mp4" type="video/mp4">
-    
-  </video>
+  <img src="../assets/images/imagencategoria.jpeg" alt="Todas" />
   <div class="banner-video-content">
     <h2>Explora nuestras categorías</h2>
     <p>Encuentra tu estilo en el mundo de las motos</p>
   </div>
 </section>
   <section class="categorias">
-    <h1 class="titulo"> Mas categorias</h1>
-
+  
     <!-- 🟢 Categorías de filtro -->
-    <nav class="categorias-nav">
-      <ul id="category-list">
-        <li><a href="#" data-category="all">Todas</a></li>
-        <li><a href="#" data-category="Vintage">Vintage</a></li>
-        <li><a href="#" data-category="Urban">Urban</a></li>
-        <li><a href="#" data-category="Enduro">Enduro</a></li>
-        <li><a href="#" data-category="Touring">Touring</a></li>
-        <li><a href="#" data-category="Cruiser">Cruiser</a></li>
-        <li><a href="#" data-category="EVO">EVO</a></li>
-      </ul>
-    </nav>
+    <div class="categorias-nav">
+  <ul id="category-list">
+    <li>
+      <a href="#" data-category="all">
+        <img src="../assets/images/casco.jpg" alt="" />
+        <h1 class="h1">Cascos</h1>
+      </a>
+    </li>
+    <li>
+      <a href="#" data-category="Chaquetas">
+        <img src="../assets/images/chaquetas.jpg" alt="" />
+        <h1>Chaquetas</h1>
+      </a>
+    </li>
+    <li>
+      <a href="#" data-category="Urban">
+        <img src="../assets/images/acce.jpeg" alt="" />
+        <h1>Accesorios</h1>
+      </a>
+    </li>
+    <li>
+      <a href="#" data-category="Enduro">
+        <img src="../assets/images/botas.jpeg" alt="" />
+        <h1>Calzado</h1>
+      </a>
+    </li>
+    <li>
+      <a href="#" data-category="Touring">
+        <img src="../assets/images/moto.jpeg" alt="" />
+        <h1>Motos</h1>
+      </a>
+    </li>
+  </ul>
+</div>
+
 
     <!-- 🟢 Banner dinámico -->
     <div id="category-banner"></div>
@@ -70,19 +90,7 @@
     <!-- 🟢 Grid de productos -->
     <div id="product-grid" class="grid-productos"></div>
   </section>
-  <footer>
-    <h2>Por qué elegirnos</h2>
-    <div class="palabras">
-        <div class="palabra">↗ Envíos rápidos</div>
-        <div class="palabra">👤 Productos certificados</div>
-        <div class="palabra">+500 clientes satisfechos</div>
-    </div>
-    <p>
-        ¿Quieres saber más sobre nuestro trabajo? Visita la tienda o
-        contáctanos.
-    </p>
-    </footer>
 
-  <script src="/MotoHub/src/js/categorias.js"></script>
+  <script src="../js/categorias.js"></script>
 </body>
 </html>
