@@ -4,22 +4,80 @@
   <meta charset="UTF-8">
   <title>Registro</title>
   <link rel="stylesheet" href="../css/form.css">
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+
   
 </head>
 <body class="body-fondo">
+  <!-- Navbar con fondo transparente -->
+  <div class="seccion-nav navbar-transparente">
+    <div class="logo">
+      <img src="../assets/images/Logosinfondo.png" alt="Logo MotoHub" />
+    </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menú">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </label>
+    <nav class="navbar">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="/src/pages/Home.html">Inicio</a></li>
+        <li><a href="/src/pages/categorias.html">Catálogo</a></li>
+        <li><a href="/src/pages/acercaNosotros.html">Servicios</a></li>
+        <li><a href="/src/pages/Contactenos.html">Contacto</a></li>
+        <li><a href="/src/pages/acercaNosotros.html">Acerca de</a></li>
+      </ul>
+    </nav>
+    <div class="">
+      <button class="botones-carrito-buscar" aria-label="Carrito">
+        <img src="../assets/images/carrito-de-compras.png" class="carrito" alt="Carrito" />
+      </button>
+      <button class="botones-carrito-buscar" aria-label="Cuenta">
+        <img src="../assets/images/avatar.png" class="avatar" alt="Avatar" />
+      </button>
+    </div>
+  </div>
   
   <section class="register-page">
     <form id="registroForm">
       <h2>Registro de Usuario</h2>
       <input type="text" id="nombre" placeholder="Nombre completo" required>
       <input type="text" id="telefono" placeholder="Número de teléfono" required>
-      <input type="email" id="email" placeholder="Correo electrónico" required>
-      <input type="password" id="password" placeholder="Contraseña" required>
-      <input type="password" id="password" placeholder="Confirmar contraseña" required>
+      <input type="email" id="email" placeholder="Correo electrónico " required>
+      <div class="password-container">
+        <input type="password" 
+        id="password" 
+        placeholder="Contraseña" required>
+        <img src="../assets/images/password-cerrado.png" alt="" id="pass-icon"
+        class="password-icon"
+        onclick="togglePassword('password')">
+      </div>
+      <div class="password-container">
+        <input type="password" id="confirmPassword" placeholder="Confirmar contraseña" required>
+        <img src="../assets/images/password-cerrado.png" alt="" id="confirm-pass-icon"
+        class="password-icon"
+        onclick="togglePassword('confirmPassword')">
+      </div>
       <button type="submit">Registrar</button>
     </form>
     <div id="mensaje"></div>
   </section>
+  <div>
+    <footer>
+    <h2>Por qué elegirnos</h2>
+    <div class="palabras">
+        <div class="palabra">↗ Envíos rápidos</div>
+        <div class="palabra">👤 Productos certificados</div>
+        <div class="palabra">+500 clientes satisfechos</div>
+    </div>
+    <p>
+        ¿Quieres saber más sobre nuestro trabajo? Visita la tienda o
+        contáctanos.
+    </p>
+    </footer>
+  </div>
 </body>
 <script src="../js/form.js"></script>
 </html>

@@ -28,12 +28,15 @@
   color: rgba(255, 68, 0, 0.916);
 }
 
-.nav-menu li a strong {
-}
+/* .nav-menu li a strong {
+} */
 
 .logo img {
-  width: 170px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 50%; 
+}
 }
 .carrito {
   width: 30px;

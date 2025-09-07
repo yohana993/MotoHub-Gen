@@ -5,12 +5,14 @@
     <title>Login</title>
     <link rel="stylesheet" href="../css/login.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/base.css">
+
   </head>
   <body class="body-fondo"
   img src="../assets/images/fondologinregistro.jpeg" alt="" >
   <div class="seccion-nav">
         <div class="logo">
-        <img src="../assets/images/Logosinfondo.png" alt="Logo MotoHub" />
+        <img src="../assets/images/Logosinfondo.png"  alt="Logo MotoHub" />
     </div>
         <input type="checkbox" id="nav-toggle" class="nav-toggle" />
         <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menú">
@@ -29,28 +31,26 @@
     </nav>
     <div class="">
         <button class="botones-carrito-buscar" aria-label="Carrito">
-            <img src="/src/assets/images/carrito-de-compras.png" class="carrito" alt="Carrito" />
+            <img src="../assets/images/carrito-de-compras.png" class="carrito" alt="Carrito" />
         </button>
         <button class="botones-carrito-buscar" aria-label="Cuenta">
-            <img src="/src/assets/images/avatar.png" class="avatar" alt="Avatar" />
+            <img src="../assets/images/avatar.png" class="avatar" alt="Avatar" />
         </button>
     </div>
     </div>
     <section class="login-page">    
     <form id="loginForm">
       <h2>Iniciar Sesión</h2> 
-      <input type="email"
-        id="email"
-        placeholder="Correo electrónico"
-        required /><br />
-      <input type="password"
-        id="password"
-        placeholder="Contraseña"
-        required /><br />
+      <input type="email" id="email" placeholder="Correo electrónico" required> 
+      <div class="password-container">
+        <input type="password" 
+        id="password" 
+        placeholder="Contraseña" required>
+        <img src="../assets/images/password-cerrado.png" alt="" id="pass-icon"
+        class="password-icon"
+        onclick="togglePassword('password')">
+      </div>
       <button type="submit">Ingresar</button>
-      <!-- <button class="secondary-btn" onclick="window.location.href='form.html'">
-      Registrarse
-    </button> -->
     </form>
     <div id="mensaje"></div>
     <br/>

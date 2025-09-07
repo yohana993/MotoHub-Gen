@@ -2,6 +2,21 @@
 const form = document.getElementById("loginForm");
 const mensajeDiv = document.getElementById("mensaje");
 
+// mostrar/ocultar contraseña con imagen
+function togglePassword(inputId) {
+  const passwordInput = document.getElementById(inputId);
+  const iconId = inputId === 'password' ? 'pass-icon' : 'confirm-pass-icon';
+  const passwordIcon = document.getElementById(iconId);
+  
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    passwordIcon.src = '../assets/images/password-abierto.png'; 
+  } else {
+    passwordInput.type = 'password';
+    passwordIcon.src = '../assets/images/password-cerrado.png'; 
+  }
+}
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
