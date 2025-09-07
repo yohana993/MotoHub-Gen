@@ -40,27 +40,39 @@
               <input type="text" id="nombre"></label>
               <label for="descripcion">Descripcion</label>
               <input type="text" id="descripcion"></label>
+              <label for="categoria">Categoria</label>
+              <select name="categoria" id="categoria">
+                <option id="cat" value="Hombre">Cascos</option>
+                <option id="cat" value="chaquetas">Cascos</option>
+                <option id="cat" value="chaquetas">Chaquetas/chalecos</option>
+                <option id="cat" value="accesorio">Accesorios</option>
+                <option id="cat" value="zapatos">Calzado</option> 
+                <option id="cat" value="Motos">Motos</option> 
+              </select>
+
               <label for="talla">Talla (Si aplica)</label>
               <input type="text" id="talla"></label>
               <label for="precio">Precio</label>
               <input type="text" id="precio"></label>
               <label for="cantidad">Cantidad</label>
               <input type="text" id="cantidad"></label>
-              <button>Calcelar</button>
-              <button>  Guardar</button>
+              <button onclick="cancelar()">Calcelar</button>
+              <button id="guardar" onclick="guardar()">  Guardar</button>
             </form>
         </div>
         <div class="previw">
           <h2>Previsualizacion</h2>
-          <div class="preview-content"></div>
+          <div class="preview-content">
           <article>
-            <img id="imagen_p" src="" alt="">
+            <img id="imagen_p" src="../assets/images/Logosinfondo.png" alt="">
             <h3 id="nombre_p">Nombre: <strong></strong></h3>
             <h4 id="descripcion_p">Descripcion: <strong></strong></h4>
+            <p id="categoria_p">Categoria: <strong></strong></p>
             <p id="talla_p">Talla: <strong></strong></p>
             <p id="precio_p">Precio: <strong></strong></p>
             
           </article>
+          </div>
         </div>
       </section>
     </main>
