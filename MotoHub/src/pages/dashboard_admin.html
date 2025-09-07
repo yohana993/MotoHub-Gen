@@ -1,137 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-<<<<<<< HEAD
-    <head>
-=======
-  <head>
->>>>>>> aa8f1f26da3f22b39fd4c54ff36d8a6e0f9dfadb
+<html lang="es">
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/dashboard_admin.css" />
-    <title>Document</title>
-<<<<<<< HEAD
-    </head>
-    <body>
+    <title>Panel de Administrador</title>
+</head>
+
+<body>
     <main>
         <div class="container_nav">
-        <nav class="nav">
-            <div class="titulo">
-                <h1>Panel De Administrador</h1>
-                <p>panel de administrador de productos</p>
-            </div>
-            <div class="btn"><button>Añadir Producto</button></div>
-        </nav>
-    </div>
-    <div class="contenedor-card">
-        <article class="card">
-            <h2>Total de Productos</h2>
-            <p>10</p>
-        </article>
-        <article class="card">
-                <h2>Total de Productos</h2>
-                <p>10</p>
-        </article>
-        <article class="card">
-                <h2>Total de Productos</h2>
-                <p>10</p>
-        </article>
-    </div>
-    <section class="container-form">
-        <div class="form-sec">
-            <h2> Registrar Producto</h2>
-            <form class="form">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre"></label>
-                <label for="descripcion">Descripcion</label>
-                <input type="text" id="descripcion"></label>
-                <label for="talla">Talla (Si aplica)</label>
-                <input type="text" id="talla"></label>
-                <label for="precio">Precio</label>
-                <input type="text" id="precio"></label>
-                <label for="cantidad">Cantidad</label>
-                <input type="text" id="cantidad"></label>
-                <button>Calcelar</button>
-                <button>  Guardar</button>
-            </form>
+            <nav class="nav">
+                <div class="titulo">
+                    <h1>Panel De Administrador</h1>
+                    <p>Panel de administrador de productos</p>
+                </div>
+                <div class="btn"><button>Añadir Producto</button></div>
+            </nav>
         </div>
-        <div class="previw">
-            <h2>Previsualizacion</h2>
-            <div class="preview-content"></div>
-            <article>
-                <img id="imagen_p" src="" alt="">
-                <h3 id="nombre_p">Nombre: <strong></strong></h3>
-                <h4 id="descripcion_p">Descripcion: <strong></strong></h4>
-                <p id="talla_p">Talla: <strong></strong></p>
-                <p id="precio_p">Precio: <strong></strong></p>
-            
+
+        <div class="contenedor-card">
+            <article class="card">
+                <h2>Total de Productos</h2>
+                <p id="total_productos">0</p>
             </article>
         </div>
-    </section>
+
+        <section class="container-form">
+            <div class="form-sec">
+                <h2>Registrar Producto</h2>
+                <form class="form" id="form-producto">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre">
+
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" id="descripcion">
+
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria">
+                        <option value="cascos">Cascos</option>
+                        <option value="chaquetas">Chaquetas/Chalecos</option>
+                        <option value="accesorios">Accesorios</option>
+                        <option value="botas">botas</option>
+                        <option value="motos">Motos</option>
+                    </select>
+
+                    <label for="talla">Talla (si aplica)</label>
+                    <input type="text" id="talla">
+
+                    <label for="precio">Precio</label>
+                    <input type="text" id="precio">
+
+                    <label for="cantidad">Cantidad</label>
+                    <input type="text" id="cantidad">
+
+                    <label for="imagen">Imagen (URL)</label>
+                    <input type="text" id="imagen">
+
+                    <div class="acciones-form">
+                        <button type="button" id="cancelar">Cancelar</button>
+                        <button type="button" id="guardar">Guardar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="previw">
+                <h2>Previsualización</h2>
+                <div class="preview-content">
+                    <article>
+                        <img id="imagen_p" src="../assets/images/Logosinfondo.png" alt="Preview producto">
+                        <h3 id="nombre_p">Nombre:</h3>
+                        <h4 id="descripcion_p">Descripción:</h4>
+                        <p id="categoria_p">Categoría:</p>
+                        <p id="talla_p">Talla:</p>
+                        <p id="precio_p">Precio:</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="listado-productos">
+            <h2>Productos Guardados</h2>
+            <div id="lista_productos"></div>
+        </section>
     </main>
+
     <script src="../js/dashboard_admin.js"></script>
 </body>
+
 </html>
-=======
-  </head>
-  <body>
-    <main>
-      <div class="container_nav">
-        <nav class="nav">
-          <div class="titulo">
-            <h1>Panel De Administrador</h1>
-            <p>panel de administrador de productos</p>
-          </div>
-          <div class="btn"><button>Añadir Producto</button></div>
-        </nav>
-      </div>
-      <div class="contenedor-card">
-        <article class="card">
-          <h2>Total de Productos</h2>
-          <p>10</p>
-        </article>
-        <article class="card">
-          <h2>Total de Productos</h2>
-          <p>10</p>
-        </article>
-        <article class="card">
-          <h2>Total de Productos</h2>
-          <p>10</p>
-        </article>
-      </div>
-      <section class="container-form">
-        <div class="form-sec">
-          <h2> Registrar Producto</h2>
-          
-            <form class="form">
-              <label for="nombre">Nombre</label>
-              <input type="text" id="nombre"></label>
-              <label for="descripcion">Descripcion</label>
-              <input type="text" id="descripcion"></label>
-              <label for="talla">Talla (Si aplica)</label>
-              <input type="text" id="talla"></label>
-              <label for="precio">Precio</label>
-              <input type="text" id="precio"></label>
-              <label for="cantidad">Cantidad</label>
-              <input type="text" id="cantidad"></label>
-              <button>Calcelar</button>
-              <button>  Guardar</button>
-            </form>
-        </div>
-        <div class="previw">
-          <h2>Previsualizacion</h2>
-          <div class="preview-content"></div>
-          <article>
-            <img id="imagen_p" src="" alt="">
-            <h3 id="nombre_p">Nombre: <strong></strong></h3>
-            <h4 id="descripcion_p">Descripcion: <strong></strong></h4>
-            <p id="talla_p">Talla: <strong></strong></p>
-            <p id="precio_p">Precio: <strong></strong></p>
-            
-          </article>
-        </div>
-      </section>
-    </main>
-    <script src="../js/dashboard_admin.js"></script>
-  </body>
-</html>
->>>>>>> aa8f1f26da3f22b39fd4c54ff36d8a6e0f9dfadb

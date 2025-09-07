@@ -6,12 +6,13 @@
   <title>Categorías</title>
   <link rel="stylesheet" href="/MotoHub/src/css/categorias.css" />
   <link rel="stylesheet" href="/MotoHub/src/css/navbar.css" />
-  
+  <link rel="stylesheet" href="/MotoHub/src/css/footer.css" />
+  <link rel="stylesheet" href="/MotoHub/src/css/base.css" />
 </head>
 <body>
   <div class="seccion-nav">
         <div class="logo">
-        <img src="/src/assets/images/logo.png" alt="Logo MotoHub" />
+        <img src="/MotoHub/src/assets/images/Logosinfondo.png" alt="Logo MotoHub" />
     </div>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" />
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menú">
@@ -101,6 +102,32 @@
     <!-- 🟢 Grid de productos -->
     <div id="product-grid" class="grid-productos"></div>
   </section>
+
+  <footer class="footer">
+    <div class="footer-feedback">
+      <h3>¿Tienes observaciones o sugerencias?</h3>
+      <form class="footer-form" action="mailto:info@tuempresa.com" method="post" enctype="text/plain">
+        <input type="email" name="correo" placeholder="Tu correo electrónico" required>
+        <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    <div class="logos">
+      <div class="facebook">
+        <a href="#"><img class="facebook-icon" src="../assets/images/facebook.png" alt="Facebook"></a>
+      </div>
+      <div class="gmail">
+        <a href="#"><img class="gmail-icon" src="../assets/images/gmail.png" alt="Gmail"></a>
+      </div>
+    <div class="linkedlin">
+        <a href="#"><img class="gmail-icon" src="../assets/images/linkedlin.png" alt="LinkedIn"></a>
+    </div>
+  </div>
+<!-- Copy -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 MotoHub. Todos los derechos reservados.</p>
+    </div>
+</footer>
 
   <script src="/MotoHub/src/js/categorias.js"></script>
 </body>
