@@ -212,12 +212,6 @@
   }
 }
 
-.footer {
-  font-family: Arial, sans-serif;
-  text-align: center;;
-  padding: 40px 20px;
-  background: linear-gradient(135deg, #a2a1a1, #e5f0c8);
-}
 
 .palabras {
   display: flex;
@@ -283,3 +277,28 @@
   justify-content: center;
   margin-top: 40px;
 }
+/* 
+  /* Footer */
+  footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 0;
+  }
+  
+  footer h2 {
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  footer p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Responsivo */
+  @media (max-width: 420px) {
+    #registroForm {
+      padding: 20px;
+    }
+  } */

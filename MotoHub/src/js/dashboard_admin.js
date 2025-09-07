@@ -16,6 +16,22 @@ const imagen = document.getElementById("imagen_p");
 const bt_guardar = document.getElementById("guardar");
 
 nombre.addEventListener("input", () => {
+<<<<<<< HEAD
+nombre_p.textContent = nombre.value;
+});
+
+descripcion.addEventListener("input", () => {
+descripcion_p.textContent = descripcion.value;
+});
+
+talla.addEventListener("input", () => {
+talla_p.textContent = talla.value;
+});
+
+precio.addEventListener("input", () => {
+precio_p.textContent = precio.value;
+});
+=======
   nombre_p.textContent = nombre.value;
 });
 
@@ -34,6 +50,7 @@ talla.addEventListener("input", () => {
 precio.addEventListener("input", () => {
   precio_p.textContent = precio.value;
 });
+<<<<<<< HEAD
 
 bt_guardar.addEventListener("click", () => {
   const producto = {
@@ -49,3 +66,6 @@ bt_guardar.addEventListener("click", () => {
   localStorage.setItem("productos", JSON.stringify(productos));
   alert("Producto guardado con éxito!");
 });
+=======
+>>>>>>> aa8f1f26da3f22b39fd4c54ff36d8a6e0f9dfadb
+>>>>>>> origin
