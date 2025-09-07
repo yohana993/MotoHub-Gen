@@ -37,38 +37,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 🟢 Banner dinámico según categoría
-    // 🟢 Banner dinámico según categoría (motos, cascos, accesorios, botas)
-function showCategoryBanner(category) {
-    const bannerContainer = document.getElementById('category-banner');
-    if (!bannerContainer) return;
+    function showCategoryBanner(category) {
+        const bannerContainer = document.getElementById('category-banner');
+        if (!bannerContainer) return;
 
-    bannerContainer.innerHTML = ''; // limpiar antes
+        bannerContainer.innerHTML = ''; // limpiar antes
 
-    // Lista de categorías válidas
-    const validCategories = ["motos", "cascos", "accesorios", "botas", "chaquetas","todo"];
+        const validCategories = ["motos", "cascos", "accesorios", "botas", "chaquetas","todo"];
 
-    if (category && category !== "all" && validCategories.includes(category.toLowerCase())) {
+        let normalized = (category || "todo").toLowerCase();
+
+        if (!validCategories.includes(normalized)) {
+            normalized = "todo"; // fallback
+        }
+
         const img = document.createElement('img');
-        img.src = `/src/assets/banners/${category.toLowerCase()}.png`; // ejemplo: botas.png
-        img.alt = `Sección ${category}`;
-        img.classList.add('banner-img');
-        bannerContainer.appendChild(img);
-    } else if (category === "all" || category === "todo") {
-        const img = document.createElement('img');
-       // imagen general para "todo"
-        img.alt = "Todos los productos";
+        img.src = `/MotoHub/src/assets/banners/${normalized}.png`; // ✅ misma ruta de tus banners
+        img.alt = `Sección ${normalized}`;
         img.classList.add('banner-img');
         bannerContainer.appendChild(img);
     }
-}
 
-
-    // Cargar productos con filtro
+    // 🟢 Cargar productos con filtro
     function loadProducts(category = "all") {
         const products = getProducts();
         productGrid.innerHTML = '';
 
-        const filtered = category === "all"
+        const filtered = category === "all" || category === "todo"
             ? products
             : products.filter(p => p.category && p.category.toLowerCase() === category.toLowerCase());
 
@@ -157,7 +152,14 @@ function showCategoryBanner(category) {
         });
     }
 
-   
+    // 🟢 Enlaces de categorías del menú
+    document.querySelectorAll('#category-list a').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const category = this.getAttribute('data-category');
+            loadProducts(category);
+        });
+    });
 
     // 🚀 Al cargar: revisar si viene ?cat= en la URL
     const params = new URLSearchParams(window.location.search);
