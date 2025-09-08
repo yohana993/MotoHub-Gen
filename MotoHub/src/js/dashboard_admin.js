@@ -12,20 +12,19 @@ const precio = document.getElementById("precio");
 const imagen = document.getElementById("imagen_p");
 
 nombre.addEventListener("input", () => {
-<<<<<<< HEAD
-nombre_p.textContent = nombre.value;
+  nombre_p.textContent = nombre.value;
 });
 
 descripcion.addEventListener("input", () => {
-descripcion_p.textContent = descripcion.value;
+  descripcion_p.textContent = descripcion.value;
 });
 
 talla.addEventListener("input", () => {
-talla_p.textContent = talla.value;
+  talla_p.textContent = talla.value;
 });
 
 precio.addEventListener("input", () => {
-precio_p.textContent = precio.value;
+  precio_p.textContent = precio.value;
 });
 nombre.addEventListener("input", () => {
   nombre_p.textContent = nombre.value;
@@ -42,4 +41,3 @@ talla.addEventListener("input", () => {
 precio.addEventListener("input", () => {
   precio_p.textContent = precio.value;
 });
-
