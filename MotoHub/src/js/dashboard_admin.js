@@ -27,7 +27,7 @@ talla_p.textContent = talla.value;
 precio.addEventListener("input", () => {
 precio_p.textContent = precio.value;
 });
-=======
+nombre.addEventListener("input", () => {
   nombre_p.textContent = nombre.value;
 });
 
@@ -42,4 +42,4 @@ talla.addEventListener("input", () => {
 precio.addEventListener("input", () => {
   precio_p.textContent = precio.value;
 });
->>>>>>> aa8f1f26da3f22b39fd4c54ff36d8a6e0f9dfadb
+
