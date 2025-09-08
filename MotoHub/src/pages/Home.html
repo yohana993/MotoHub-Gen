@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-commerce Layout</title>
-    <!-- <link rel="stylesheet" href="/src/css/base.css" /> -->
+    <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="stylesheet" href="../css/Home.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/categorias.css" />
+    
+
+
+
 
   </head>
   <body>
@@ -104,36 +109,10 @@
 
     <section class="productos">
       <h3>PRODUCTOS DESTACADOS</h3>
-      <div class="grid-productos">
+       <!-- 🟢 Grid de productos -->
+    <div id="product-grid" class="grid-productos"></div>
         <div class="prod">
-          <img class="img-prod" src="image.png" alt="producto" />
-          <h2></h2>
-          <p>Descripcion del producto</p>
-          <p>25 $</p>
-          <button class="ver-mas">agregar al carrito</button>
-        </div>
-        <div class="prod">
-          <img class="img-prod" src="image.png" alt="producto" />
-          <h2></h2>
-          <p>Descripcion del producto</p>
-          <p>25 $</p>
-          <button class="ver-mas">agregar al carrito</button>
-        </div>
-        <div class="prod">
-          <img class="img-prod" src="image.png" alt="producto" />
-          <h2></h2>
-          <p>Descripcion del producto</p>
-          <p>25 $</p>
-          <button class="ver-mas">Ver más</button>
-        </div>
-        <div class="prod">
-          <img class="img-prod" src="image.png" alt="producto" />
-          <h2></h2>
-          <p>Descripcion del producto</p>
-          <p>25 $</p>
-          <button class="ver-mas">Ver más</button>
-        </div>
-      </div>
+          
     </section>
 
     <footer class="footer">
@@ -166,6 +145,8 @@
     <!-- Enlazar al script de productos -->
 
       
-    <script src="/src/js/cart.js"></script>
+    <script src="/MotoHub/src/js/Home.js"></script>
+    <script src="/MotoHub/src/js/categorias.js"></script>
+
   </body>
 </html>
