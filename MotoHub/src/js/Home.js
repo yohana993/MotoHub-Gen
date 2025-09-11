@@ -1,73 +1,71 @@
+// 🟢 Normalizar productos (asegura que todos tengan las mismas propiedades)
+function normalizeProduct(p) {
+    return {
+        id: p.id || Date.now().toString(),
+        name: p.name || p.nombre || "Producto sin nombre",
+        description: p.description || p.descripcion || "Sin descripción disponible",
+        category: (p.category || p.categoria || "otro").toLowerCase(),
+        price: p.price || p.precio || 0,
+        image: p.image || p.imagen || "default-image.png",
+        oldPrice: p.oldPrice || p.precioAnterior || null
+    };
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Referencia a las tarjetas existentes en el HTML
-    const productCards = document.querySelectorAll('.prod'); // Seleccionamos todas las tarjetas .prod en el HTML
-
-    // Función para cargar los productos desde localStorage
-    function loadProducts() {
-        const products = getProducts(); // Obtenemos los productos del localStorage
-
-        // Asegurarnos de que no haya más productos que tarjetas disponibles
-        if (products.length > productCards.length) {
-            console.warn('Hay más productos que tarjetas disponibles. Algunos productos no se mostrarán.');
-            return;
-        }
-
-        // Para cada producto almacenado, lo colocamos en una tarjeta existente
-        products.forEach((product, index) => {
-            const card = productCards[index];
-
-            // Llenamos la tarjeta con los datos del producto
-            card.querySelector('.img-prod').src = product.image || 'default-image.png';  // Default image in case of missing image
-            card.querySelector('h2').textContent = product.name || 'Producto sin nombre';
-            card.querySelector('p').textContent = product.description || 'Sin descripción disponible';
-            card.querySelector('.ver-mas').setAttribute('data-id', product.id);
-            card.querySelector('.comprar').setAttribute('data-id', product.id);
-        });
-    }
-
-    // Función para obtener productos desde localStorage
-    function getProducts() {
-        return JSON.parse(localStorage.getItem('motohub_products') || '[]');
-    }
-
-    // Cargar los productos al cargar la página
-    loadProducts();
-});
-
-// Leer productos desde localStorage
-// Función para cargar productos desde localStorage
-// Función para cargar productos desde localStorage
-function loadProductsFromLocalStorage() {
-    // Obtener los productos almacenados desde localStorage
+// 🟢 Obtener productos desde localStorage
+function getProducts() {
     const productos = JSON.parse(localStorage.getItem('motohub_products')) || [];
-    
+    return productos.map(normalizeProduct);
+}
+
+// 🟢 Mostrar productos en la cuadrícula
+function loadProductsFromLocalStorage() {
+    const productos = getProducts();
+
     // Seleccionar el contenedor donde se mostrarán los productos
     const gridProductos = document.querySelector('.grid-productos');
 
-    // Limpiar la cuadrícula antes de agregar los productos (en caso de recargar)
+    // Limpiar la cuadrícula antes de agregar productos (evita duplicados)
     gridProductos.innerHTML = '';
 
-    // Mostrar los productos en tarjetas
+    if (productos.length === 0) {
+        gridProductos.innerHTML = '<p>No hay productos disponibles.</p>';
+        return;
+    }
+
+    // Crear las tarjetas dinámicamente
     productos.forEach(producto => {
         const productCard = document.createElement('div');
         productCard.classList.add('prod');
 
-        // Crear el HTML dinámicamente con los datos del producto
         productCard.innerHTML = `
             <img class="img-prod" src="${producto.image}" alt="${producto.name}">
             <h2>${producto.name}</h2>
             <p>${producto.description}</p>
-            <p>${producto.price} $</p>
-            <button class="ver-mas">Ver más</button>
-            <button class="comprar">Comprar</button>
+            <p class="precio">$${producto.price}</p>
+            ${producto.oldPrice ? `<p class="precio-anterior">$${producto.oldPrice}</p>` : ""}
+            <button class="ver-mas" data-id="${producto.id}">Ver más</button>
+            <button class="comprar" data-id="${producto.id}">Comprar</button>
         `;
 
-        // Agregar la tarjeta del producto a la cuadrícula
         gridProductos.appendChild(productCard);
     });
 }
 
-// Llamar a la función para cargar los productos cuando se carga la página
-window.addEventListener('DOMContentLoaded', loadProductsFromLocalStorage);
+// 🟢 (Opcional) Insertar productos de prueba si localStorage está vacío
+function seedProducts() {
+    if (!localStorage.getItem('motohub_products')) {
+        const sample = [
+            { id: 1, name: "Casco Pro", description: "Casco de alta seguridad", category: "cascos", price: 300000, image: "/MotoHub/src/assets/images/casco1.png" },
+            { id: 2, name: "Guantes Moto", description: "Guantes de cuero reforzado", category: "accesorios", price: 120000, image: "/MotoHub/src/assets/images/guantes1.png" },
+            { id: 3, name: "Chaqueta Touring", description: "Chaqueta impermeable y térmica", category: "chaquetas", price: 450000, image: "/MotoHub/src/assets/images/chaqueta1.png", oldPrice: 500000 }
+        ];
+        localStorage.setItem("motohub_products", JSON.stringify(sample));
+        console.log("✅ Productos de prueba añadidos al localStorage");
+    }
+}
 
+// 🚀 Inicializar al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    seedProducts(); // 👈 comentar esta línea si NO quieres productos de prueba
+    loadProductsFromLocalStorage();
+});
