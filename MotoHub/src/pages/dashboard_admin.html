@@ -4,28 +4,44 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="/MotoHub/src/css/dashboard_admin.css"
-    <title>Panel de Administrador</title>
+   <link rel="stylesheet" href="/MotoHub/src/css/dashboard_admin.css" >
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <title>Dashboard</title>
 </head>
 
 <body>
     <main>
-        <div class="container_nav">
-            <nav class="nav">
-                <div class="titulo">
-                    <h1>Panel De Administrador</h1>
-                    <p>Panel de administrador de productos</p>
+        <section class="sidebard">
+            <div class="logo">MotoHub</div>
+             <nav class="nav">
+                <div class="menu">
+                    <i class="fa-solid fa-table-list"></i> <h4>ver productos</h4>
                 </div>
-                <div class="btn"><button>Añadir Producto</button></div>
+                <div class="menu">
+                    <i class="fa-solid fa-newspaper"></i> <h4>Editar productos</h4>
+                </div>
+                <div class="menu">
+                    <i class="fa-solid fa-trash"></i>
+                     <h4>ver productos</h4>
+                </div>
+                
             </nav>
         </div>
+            
+        </section>
+        <div class="container">
+            
+           
 
         <div class="contenedor-card">
-            <article class="card">
-                <h2>Total de Productos</h2>
-                <p id="total_productos">0</p>
-            </article>
+            <div class="titulo"> <h2>Panel De Administrador</h2>
+                    <p>Panel de administrador de productos</p></div>
+           
         </div>
+         <article class="card">
+               <div>Nombre del administrador</div>
+               
+            </article>
 
         <section class="container-form">
             <div class="form-sec">
@@ -75,6 +91,7 @@
                         <p id="categoria_p">Categoría:</p>
                         <p id="talla_p">Talla:</p>
                         <p id="precio_p">Precio:</p>
+                        <div class="btn"><button>Añadir Producto</button></div>
                     </article>
                 </div>
             </div>
@@ -84,6 +101,8 @@
             <h2>Productos Guardados</h2>
             <div id="lista_productos"></div>
         </section>
+        </div>
+  
     </main>
 
     <script src="../js/dashboard_admin.js"></script>
