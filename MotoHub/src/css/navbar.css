@@ -29,9 +29,6 @@
   white-space: nowrap;
   transition: color 0.3s ease;
 }
-.nav-menu li a:hover {
-  color: rgba(255, 68, 0, 0.916);
-}
 
 .logo img {
   width: 100px;

@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  /* font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif; */
   color: #222;
   background: #fff;
   -webkit-font-smoothing: antialiased;
@@ -28,22 +28,6 @@ body {
   top: 40px;
   z-index: 0;
 }
-
-/* img {
-  max-width: 100%;
-  display: block;
-}
-button {
-  font-family: inherit;
-} */
-
-/* Logo consistente */
-/* .logo img {
-  width: 56px;
-  height: 56px;
-  object-fit: cover;
-  border-radius: 50%; 
-} */
 
 .botones-carrito-buscar {
   height: 44px;
