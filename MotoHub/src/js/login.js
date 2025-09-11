@@ -1,6 +1,8 @@
 
 const form = document.getElementById("loginForm");
-const mensajeDiv = document.getElementById("mensaje");
+const mensaje = document.getElementById("mensaje");
+const mensajeDiv = document.getElementById("mensajeDiv");
+
 
 // mostrar/ocultar contraseña con imagen
 function togglePassword(inputId) {
@@ -30,14 +32,24 @@ form.addEventListener("submit", function (e) {
   const usuario = usuarios.find(u => u.email === email && u.password === password);
 
   if (usuario) {
-    mensajeDiv.style.color = "green";
-    mensajeDiv.innerHTML = "Inicio de sesión exitoso!";
+    mensaje.style.color = "green";
+    mensajeDiv.style.backgroundColor = "#d1fae57d";
+    mensajeDiv.style.filter = "drop-shadow(0px 4px 10px #cddad5ff)";
+    mensajeDiv.style.fontSize = "25px";
+    mensaje.innerHTML = "Inicio de sesión exitoso!";
+    mensajeDiv.style.borderRadius = "8px";
+    mensajeDiv.style.padding = "3px";
     localStorage.setItem("usuarioActivo", JSON.stringify(usuario));
     setTimeout(() => {
       window.location.href = "home.html";
     }, 1000);
   } else {
     mensajeDiv.style.color = "red";
-    mensajeDiv.innerHTML = "Correo o contraseña incorrectos.";
+    mensajeDiv.style.backgroundColor = "#f8d7da7d";
+    mensajeDiv.style.filter = "drop-shadow(0px 4px 10px #f1c0c6ff)";
+    mensajeDiv.style.fontSize = "25px";
+    mensajeDiv.style.borderRadius = "8px";
+    mensajeDiv.style.padding = "3px";
+    mensajeDiv.innerHTML = "Correo o contraseña incorrectos";
   }
 });

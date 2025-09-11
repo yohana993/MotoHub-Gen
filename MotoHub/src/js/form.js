@@ -2,7 +2,7 @@
 const form = document.getElementById("registroForm");
 const mensaje = document.getElementById("mensaje");
 
-// mostrar/ocultar contraseña con imagen
+// mostrar/ocultar contraseña 
 function togglePassword(inputId) {
   const passwordInput = document.getElementById(inputId);
   const iconId = inputId === 'password' ? 'pass-icon' : 'confirm-pass-icon';
@@ -28,31 +28,39 @@ form.addEventListener("submit", function (e) {
 
   // Validación de contraseñas
   if (password !== confirmPassword) {
-    mensaje.style.color = "red";
-    mensaje.innerHTML = "⚠️ Las contraseñas no coinciden.";
+    Swal.fire({
+      icon: 'warning',
+      title: 'Las contraseñas no coinciden',
+      text: 'Por favor verifica e inténtalo de nuevo.',
+      confirmButtonText: 'Aceptar'
+    });
     return;
   }
 
   const usuario = { nombre, telefono, email, password };
-
   let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
+  // Validación de correo repetido
   if (usuarios.find(u => u.email === email)) {
-    mensaje.style.color = "red";
-    mensaje.innerHTML = "⚠️ Este correo ya está registrado.";
+    Swal.fire({
+      icon: 'error',
+      title: 'Este correo ya está registrado',
+      text: 'Intenta iniciar sesión o usa otro correo.',
+      confirmButtonText: 'Aceptar'
+    });
     return;
   }
 
   usuarios.push(usuario);
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-  mensaje.style.color = "green";
-  mensaje.innerHTML = `✅ Usuario "${nombre}" guardado con éxito!`;
-
-  alert(`Usuario "${nombre}" guardado con éxito!`);
-
-  // Redirigir después de 2s
-  setTimeout(() => {
-    window.location.href = "login.html";
-  }, 2000);
+  // Modal de éxito y redirección al login al confirmar
+  Swal.fire({
+    icon: 'success',
+    title: '¡Usuario creado con éxito!',
+    text: 'Tu cuenta fue registrada. Ahora inicia sesión.',
+    confirmButtonText: 'Aceptar'
+  }).then(() => {
+    window.location.href = 'login.html';
+  });
 });
