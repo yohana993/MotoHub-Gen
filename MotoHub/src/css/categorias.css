@@ -133,31 +133,39 @@ gap: 200px;
 }
 
 .banner-img {
-  width: 100%;           /* ocupa todo el ancho disponible */
-  max-width: 1200px;     /* no pasa del contenedor */
-  height: 250px;         /* altura fija para uniformidad */
-  object-fit: cover;     /* recorta la imagen sin deformarla */
+  width: 100%;
+  height: auto; /* Ajusta la altura en función del ancho */
+  object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Banner con video de fondo */
 .banner-video {
   position: relative;
   width: 100%;
-  height: 350px; /* puedes subirlo a 400px/500px */
+  height: 350px; /* Puedes ajustar la altura si lo deseas */
   overflow: hidden;
   border-radius: 8px;
   margin-bottom: 2rem;
+}
+
+.banner-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ajusta la imagen para que ocupe todo el espacio sin deformarse */
+  object-position: center center; /* Centra la imagen */
+  border-radius: 8px;
 }
 
 .banner-video-bg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* ajusta el video al contenedor */
+  width: 200%;
+  height: 300%;
+ 
   z-index: 1;
 }
 
