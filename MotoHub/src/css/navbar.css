@@ -1,10 +1,11 @@
 .seccion-nav {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 4px 40px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 75px;
 }
 
 .nav-menu {
@@ -29,49 +30,22 @@
   white-space: nowrap;
   transition: color 0.3s ease;
 }
+.carr-user {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.carr-user a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.83);
+  font-size: 25px;
+}
 
 .logo img {
   width: 100px;
   height: 100px;
   object-fit: contain;
-  border-radius: 8px; 
-}
-
-.carrito {
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  color: azure;
-}
-.botones-carrito-buscar {
-  background-color: rgba(250, 247, 247, 0.227);
-  border: none;
-}
-.avatar {
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  color: azure;
-}
-
-.nav-toggle {
-  display: none;
-}
-
-.nav-toggle-label {
-  display: none;
-  cursor: pointer;
-  padding: 8px;
   border-radius: 8px;
-  border: 1px solid rgb(31, 73, 239);
-}
-
-.nav-toggle-label .bar {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: rgba(251, 246, 246, 0.9);
-  margin: 5px 0;
 }
 
 @media (max-width: 768px) {

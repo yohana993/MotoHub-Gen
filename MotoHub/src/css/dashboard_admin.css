@@ -22,6 +22,30 @@ nav {
   margin-left: 20px;
   height: 45px;
 }
+.menu a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #0059ff;
+  position: relative;
+  z-index: 0;
+}
+.menu a.active::after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 30px;
+  margin-left: -23px;
+  position: absolute;
+  background-color: #ff4d00;
+  color: #ff4d00;
+  z-index: 1;
+  box-shadow: 15px 0 40px 6px #ff4d00;
+
+  transition: width 0.3s ease-in-out;
+}
 
 .sidebard {
   background-color: #101010;
