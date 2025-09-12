@@ -1,13 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-}
 
 /* Estilos del footer */
 footer {
@@ -31,13 +21,12 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Sección Match Point */
+/* Sección logo */
 .brand-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    text-align: center;
 }
 
 .logo img {
@@ -73,11 +62,15 @@ footer {
 }
 
 .footer-section ul {
-    list-style: none;
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
 }
 
 .footer-section ul li {
     margin-bottom: 5px;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
 }
 
 .footer-section a {
