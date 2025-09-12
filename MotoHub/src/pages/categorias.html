@@ -6,7 +6,8 @@
   <title>Categorías</title>
   <link rel="stylesheet" href="/MotoHub/src/css/categorias.css" />
   <link rel="stylesheet" href="/MotoHub/src/css/navbar.css" />
-  <link rel="stylesheet" href="/MotoHub/src/css/footer.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <!-- <link rel="stylesheet" href="/MotoHub/src/css/base.css" /> -->
 </head>
 <body>
@@ -43,9 +44,9 @@
   
 </section>
   <section class="categorias">
-   
+  
     <!-- 🟢 Categorías de filtro -->
-   
+  
 <section class="categorias">
   <!-- 🟢 Categorías de filtro -->
   <div class="categorias-nav">
@@ -99,32 +100,44 @@
     <div id="product-grid" class="grid-productos"></div>
   </section>
 
-  <footer class="footer">
-    <div class="footer-feedback">
-      <h3>¿Tienes observaciones o sugerencias?</h3>
-      <form class="footer-form" action="mailto:info@tuempresa.com" method="post" enctype="text/plain">
-        <input type="email" name="correo" placeholder="Tu correo electrónico" required>
-        <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-    <div class="logos">
-      <div class="facebook">
-        <a href="#"><img class="facebook-icon" src="../assets/images/facebook.png" alt="Facebook"></a>
+  <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="brand-section">
+            <div class="logo">
+              <img src="../assets/images/Logosinfondo.png" alt="Motohub Logo">
+              </div>
+            <p></p>
+          </div>
+          <div class="footer-section">
+            <h6>ENLACES</h6>
+            <ul>
+              <li><a href="../pages/Home.html">Inicio</a></li>
+              <li><a href="../pages/categorias.html">Catálogo</a></li>
+              <li><a href="../pages/Contactenos.html">Contacto</a></li>
+              <li><a href="../pages/acercaNosotros.html">Acerca de</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact-info">
+            <h6>CONTACTO</h6>
+            <p><i class="bi bi-envelope"></i> serviciomotohub@gmail.com</p>
+            <p><i class="bi bi-geo-alt"></i> Colombia</p>
+          </div>
+          <div class="footer-section">
+            <h6>SÍGUENOS</h6>
+            <div class="social-links">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 MotoHub. Todos los derechos reservados.</p>
+        </div>
       </div>
-      <div class="gmail">
-        <a href="#"><img class="gmail-icon" src="../assets/images/gmail.png" alt="Gmail"></a>
-      </div>
-    <div class="linkedlin">
-        <a href="#"><img class="gmail-icon" src="../assets/images/linkedlin.png" alt="LinkedIn"></a>
-    </div>
-  </div>
-<!-- Copy -->
-    <div class="footer-bottom">
-      <p>&copy; 2025 MotoHub. Todos los derechos reservados.</p>
-    </div>
-</footer>
-
+    </footer>
   <script src="/MotoHub/src/js/categorias.js"></script>
   <script src="../js/cart.js"></script>
 </body>
