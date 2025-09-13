@@ -7,36 +7,58 @@
   <link rel="stylesheet" href="/MotoHub/src/css/categorias.css" />
   <link rel="stylesheet" href="/MotoHub/src/css/navbar.css" />
   <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/carrito.css" />
+  <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- <link rel="stylesheet" href="/MotoHub/src/css/base.css" /> -->
 </head>
 <body>
-  <div class="seccion-nav">
-        <div class="logo">
-        <img src="/MotoHub/src/assets/images/Logosinfondo.png" alt="Logo MotoHub" />
-    </div>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menú">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </label>
-    <nav class="navbar">
+  <main class="carrito">
+      <div class="container_nav">
+        <nav class="nav-carrito">
+          <button class="cerrar-carrito"><i class="fa-light fa-power-off"></i></button>
+          <div><h4>Carrito de Compras</h4></div>
+          
+        </nav>
+      </div>
+      <div class="contenedor-productos">
+        <div class="card">
+          <img src="../assets/images/moto.png" alt="" />
+          <div class="text-card">
+            <h3>Moto Yamaha</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Blanditiis
+            </p>
+            <h4>2.000.000</h4>
+          </div>
+        </div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
+    </main>
+    <div class="seccion-nav">
+      <div class="logo">
+        <img src="../assets/images/Logosinfondo.png" alt="Logo MotoHub" />
+      </div>
+      <nav class="navbar">
         <ul class="nav-menu" id="nav-menu">
-            <li><a href="../pages/Home.html">Inicio</a></li>
-            <li><a href="#" class="active"> Catálogo</a></li>
-            <li><a href="../pages/Contactenos.html">Contacto</a></li>
-            <li><a href="../pages/acercaNosotros.html">Acerca de</a></li>
+          <li>
+            <a href="../pages/Home.html">Inicio</a>
+          </li>
+          <li>
+            <a href="#" class="active">Catálogo</a></li>
+          <li><a href="../pages/Contactenos.html">Contacto</a></li>
+          <li><a href="../pages/acercaNosotros.html">Acerca de</a></li>
         </ul>
-    </nav>
-    <div class="">
-        <button class="botones-carrito-buscar" aria-label="Carrito" data-cart-open>
-            <img src="../assets/images/carrito-de-compras.png" class="carrito" alt="Carrito" />
+      </nav>
+      <div class="carr-user">
+        <button id="btn-carrito" href=""><i class="fa-solid fa-cart-shopping"></i></button>
+        <a href="../pages/login.html"><i class="fa-solid fa-user-tie"></i></a>
         </button>
-        <button class="botones-carrito-buscar" aria-label="Cuenta">
-            <img src="../assets/images/avatar.png" class="avatar" alt="Avatar" />
-        </button>
-    </div>
+      </div>
     </div>
 
     <section class="banner-video">
