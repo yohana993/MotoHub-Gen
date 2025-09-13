@@ -207,11 +207,11 @@ gap: 200px;
 }
 
 #category-banner {
-  width: 100vw;       /* ancho completo de la pantalla */
-  margin: 0;          /* sin márgenes */
-  padding: 0;         /* sin padding */
+  width: 100vw;       
+  margin: 0;         
+  padding: 0;        
   position: relative; 
-  left: 50%;          /* truco para corregir el scroll */
+  left: 50%;         
   right: 50%;
   margin-left: -50vw; 
   margin-right: -50vw;

@@ -8,6 +8,9 @@
   height: 75px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav-menu {
@@ -19,6 +22,7 @@
   margin: 0;
   padding: 0;
 }
+
 .seccion-nav .nav-menu li a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.83);
@@ -31,7 +35,9 @@
   display: block;
   white-space: nowrap;
   transition: color 0.3s ease;
+  position: relative;
 }
+
 .carr-user {
   display: flex;
   align-items: center;
@@ -48,14 +54,27 @@
 #btn-user a{
   text-decoration: none; 
 }
+
 #btn-user {
   background-color: transparent;
   padding: 0;
   border: none;
   color: black;
 }
+
 .carr-user i {
   font-size: 25px;
+  color: #000; /* Unifica color del icono de usuario con el carrito */
+}
+
+/* Asegura que el enlace del usuario no herede azul por defecto */
+.carr-user a {
+  color: #000;
+}
+.carr-user a:visited,
+.carr-user a:hover,
+.carr-user a:active {
+  color: #000;
 }
 
 .logo img {
@@ -93,11 +112,18 @@
     display: flex;
   }
 }
-.nav-menu a.active {
-  position: relative;
-  color: rgba(255, 68, 0, 0.916);
-  background-color: rgba(255, 68, 0, 0.1);
-  width: 100%;
+
+
+
+.nav-menu a.active::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 6px;
+  height: 2px;
+  background-color: orangered;
+  border-radius: 1px;
 }
 
 .nav-menu li {
@@ -106,6 +132,7 @@
   padding: 0;
   font-size: 20px;
 }
+
 .nav-menu li.active {
-  border-bottom: 2px solid orangered;
+  border-bottom: none;
 }
