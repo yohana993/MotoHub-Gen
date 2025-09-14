@@ -95,7 +95,8 @@ function seedProducts() {
 // script de carrucel
 const carrucelHero = document.querySelector('.carrucel-hero');
 const carrucelTrack = document.querySelector('.carrucel-track');
-const slides = document.querySelectorAll('.carrucel-track .hero');
+// Seleccionar todas las secciones dentro del track, sin importar su clase específica
+const slides = carrucelTrack ? Array.from(carrucelTrack.children) : [];
 
 if (carrucelHero && carrucelTrack && slides.length) {
   let index = 0; // índice actual
