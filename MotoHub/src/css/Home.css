@@ -32,25 +32,44 @@ body {
   width: 100%;
   height: 600px;
   padding: 80px 20px;
-  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
   background: linear-gradient(
     180deg,
     rgba(17, 134, 223, 0.933),
     rgba(5, 6, 5, 0.748)
   );
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin-top: 0;
+}
+.img-hero {
+  display: flex;
+  justify-content: center;
+}
+.img-hero img {
+  width: 100%;
+  height: 250px;
+  animation: mover 3s linear infinite;
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
-.hero::before {
+/* .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.641));
   pointer-events: none;
-}
+} */
 
 @media (max-width: 992px) {
   .hero {
@@ -83,7 +102,7 @@ body {
   position: relative;
   z-index: 1;
   width: 700px;
-  margin: 0 40px;
+  margin: 0 50px;
   text-align: left;
 }
 .seccion-hero button {
@@ -116,6 +135,9 @@ body {
   -webkit-backdrop-filter: blur(10px);
   font-size: 15px;
 }
+#btn-explorar:hover {
+  transform: rotatez(10deg);
+}
 #btn-comprar {
   border: none;
   padding: 15px 25px;
@@ -124,6 +146,9 @@ body {
   cursor: pointer;
   color: #e9e6e6;
   font-size: 15px;
+}
+#btn-comprar:hover {
+  transform: rotatez(-10deg);
 }
 
 .categorias {
@@ -516,7 +541,7 @@ body {
   align-items: center;
   color: aliceblue;
 }
-.contenedor-proyectos::after {
+/* .contenedor-proyectos::after {
   position: relative;
   content: "";
   width: 0.2rem;
@@ -528,20 +553,21 @@ body {
 
   box-shadow: 0 0 600px 400px rgb(0, 204, 255);
   z-index: -3;
-}
+} */
 .contenedor-proyectos {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
-  gap: 20px;
+
   justify-content: space-around;
   margin-block: 50px;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 50px;
   color: rgb(6, 6, 6);
-  gap: 20px;
-  row-gap: 25px;
+  column-gap: -20px;
+  row-gap: 110px;
+
   font-family: var(--fuente);
 }
 .card-proyecto {
@@ -578,7 +604,6 @@ body {
 .text-card-prod {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  /* border-radius: 10px; */
   background-color: #2424246f;
   display: flex;
   margin-top: auto;
@@ -586,7 +611,7 @@ body {
   flex-direction: column;
   padding: 20px;
   position: absolute;
-  top: 250px;
+  top: 258px;
   text-align: left;
   color: rgb(255, 255, 255);
   opacity: 0;
@@ -607,19 +632,11 @@ body {
   gap: 15px;
 }
 .ver-proyecto button {
-  border-radius: 10px;
+  border-radius: 60px;
   cursor: pointer;
-  background-color: rgba(207, 204, 204, 0.21);
+  background-color: rgba(252, 117, 6, 0.951);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: none;
   color: rgb(255, 255, 255);
-  border-width: 3px;
-  border-style: solid;
-  border-image: linear-gradient(
-    to right,
-    rgb(184, 60, 3),
-    rgba(2, 2, 2, 0.747)
-  );
-  border-image-slice: 1;
 }

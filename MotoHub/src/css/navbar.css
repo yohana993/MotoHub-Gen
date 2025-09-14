@@ -51,8 +51,8 @@
   color: black;
 }
 
-#btn-user a{
-  text-decoration: none; 
+#btn-user a {
+  text-decoration: none;
 }
 
 #btn-user {
@@ -111,8 +111,6 @@
     display: flex;
   }
 }
-
-
 
 .nav-menu a.active::after {
   content: "";
