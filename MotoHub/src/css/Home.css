@@ -29,15 +29,21 @@ body {
 }
 
 .carrucel-hero {
-  display: flex;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden; /* viewport del carrusel */
+}
+
+/* Pista interna para deslizar las secciones del héroe */
+.carrucel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
 }
 
 .hero {
-  flex: 0 0 100%;
-  width: 100%;
+  flex: 0 0 auto; /* el ancho lo controla JS (width %) */
   height: 600px;
   padding: 80px 20px;
   display: grid;

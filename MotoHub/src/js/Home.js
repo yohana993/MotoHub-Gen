@@ -93,28 +93,60 @@ function seedProducts() {
 }
 
 // script de carrucel
-const carrucel = document.querySelector(".carrucel-hero");
-const slides = document.querySelectorAll(".hero");
+const carrucelHero = document.querySelector('.carrucel-hero');
+const carrucelTrack = document.querySelector('.carrucel-track');
+const slides = document.querySelectorAll('.carrucel-track .hero');
 
-carrucel.style.width = `${slides.length * 100}%`;
+if (carrucelHero && carrucelTrack && slides.length) {
+  let index = 0; // índice actual
+  let slideWidth = carrucelHero.clientWidth;
+  let intervalId = null;
 
-slides.forEach((slide) => {
-  slide.style.width = `${100 / slides.length}%`;
-});
-
-let index = 0; // índice actual
-
-function moverCarrucel() {
-  index++;
-
-  // Cuando llega al final, vuelve al inicio
-  if (index >= slides.length) {
-    index = 0;
+  function applySizes() {
+    slideWidth = carrucelHero.clientWidth;
+    // Asignar ancho exacto en px a cada slide y a la pista
+    slides.forEach((slide) => {
+      slide.style.width = `${slideWidth}px`;
+    });
+    carrucelTrack.style.width = `${slideWidth * slides.length}px`;
+    // Reposicionar acorde al índice actual
+    carrucelTrack.style.transition = 'none';
+    carrucelTrack.style.transform = `translateX(-${index * slideWidth}px)`;
+    // Forzar próximo frame para reactivar la transición
+    requestAnimationFrame(() => {
+      carrucelTrack.style.transition = 'transform 0.8s ease-in-out';
+    });
   }
 
-  carrucel.style.transition = "transform 0.8s ease-in-out";
-  carrucel.style.transform = `translateX(-${index * 100}%)`;
-}
+  function moverCarrucel() {
+    index = (index + 1) % slides.length;
+    carrucelTrack.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
 
-// Intervalo de movimiento automático
-setInterval(moverCarrucel, 3000);
+  function startAutoPlay() {
+    stopAutoPlay();
+    if (slides.length > 1) {
+      intervalId = setInterval(moverCarrucel, 3000);
+    }
+  }
+
+  function stopAutoPlay() {
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+  }
+
+  // Inicializar
+  applySizes();
+  startAutoPlay();
+
+  // Recalcular en resize
+  window.addEventListener('resize', () => {
+    applySizes();
+  });
+
+  // Opcional: pausa en hover
+  carrucelHero.addEventListener('mouseenter', stopAutoPlay);
+  carrucelHero.addEventListener('mouseleave', startAutoPlay);
+}
