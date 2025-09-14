@@ -33,7 +33,11 @@ body {
   height: 600px;
   padding: 80px 20px;
   position: relative;
-  background-image: url(../assets/images/herohome.jpeg);
+  background: linear-gradient(
+    180deg,
+    rgba(223, 17, 17, 0.933),
+    rgba(5, 6, 5, 0.748)
+  );
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -502,6 +506,9 @@ body {
     text-align: center;
   }
 }
+.proyectos {
+  margin-block: 50px;
+}
 /* css card de productos opcional */
 .titulo-proyectos {
   display: flex;
@@ -509,11 +516,27 @@ body {
   align-items: center;
   color: aliceblue;
 }
+.contenedor-proyectos::after {
+  position: relative;
+  content: "";
+  width: 0.2rem;
+  height: 0.2rem;
+  border-radius: 50%;
+  background-color: #ec1f10;
+  left: 0;
+  top: -1100px;
+
+  box-shadow: 0 0 600px 400px rgb(0, 204, 255);
+  z-index: -3;
+}
 .contenedor-proyectos {
-  display: flex;
-  flex-wrap: wrap;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 20px;
   justify-content: space-around;
-  margin: 20px 120px;
+  margin-block: 50px;
   background-color: #ffffff;
   padding: 20px;
   color: rgb(6, 6, 6);
@@ -555,7 +578,7 @@ body {
 .text-card-prod {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   background-color: #2424246f;
   display: flex;
   margin-top: auto;
