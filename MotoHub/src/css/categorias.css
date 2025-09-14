@@ -9,6 +9,7 @@ body {
   padding: 2rem;
   max-width: 1200px;
   margin: auto;
+  gap: 40px;
 }
 
 .titulo {
@@ -28,7 +29,7 @@ body {
   background: #fff;
   border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.2s ease;
 }
@@ -89,36 +90,26 @@ button {
   margin-bottom: 10px;
 }
 .categorias-nav ul a {
-
   text-decoration: none;
   color: black;
   margin-bottom: 50px;
-  
-
 }
 
 .categorias-nav ul {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+
   justify-content: center;
-  gap: 0px;
+  gap: 40px;
 }
 
 .categorias-nav li {
-  display: inline-block;
-
 }
 
 .category-list {
-
-gap: 200px;
-  
-
+  gap: 200px;
 }
-
-
 
 /* Estado activo */
 .categorias-nav a.active {
@@ -140,7 +131,6 @@ gap: 200px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Banner con video de fondo */
 .banner-video {
   position: relative;
@@ -154,7 +144,7 @@ gap: 200px;
 .banner-video img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* Ajusta la imagen para que ocupe todo el espacio sin deformarse */
+  object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio sin deformarse */
   object-position: center center; /* Centra la imagen */
   border-radius: 8px;
 }
@@ -165,7 +155,7 @@ gap: 200px;
   left: 0;
   width: 200%;
   height: 300%;
- 
+
   z-index: 1;
 }
 
@@ -176,7 +166,7 @@ gap: 200px;
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
-  text-shadow: 0px 2px 8px rgba(0,0,0,0.6);
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .banner-video-content h2 {
@@ -197,7 +187,7 @@ gap: 200px;
 }
 
 .categorias-nav li a img {
-  width: 60px;   /* ajusta según el tamaño de tu icono */
+  width: 60px; /* ajusta según el tamaño de tu icono */
   height: auto;
   transition: transform 0.2s ease;
 }
@@ -207,13 +197,13 @@ gap: 200px;
 }
 
 #category-banner {
-  width: 99.4vw;       
-  margin: 0;         
-  padding: 0;        
-  position: relative; 
-  left: 50%;         
+  width: 99.4vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
   right: 50%;
-  margin-left: -50vw; 
+  margin-left: -50vw;
   margin-right: -50vw;
 }
 
@@ -221,7 +211,7 @@ gap: 200px;
   width: 100%;
   height: auto;
   display: block;
-} 
+}
 
 /* 🔹 CONTENEDOR DE PRODUCTOS (GRID) */
 #product-grid {
@@ -237,13 +227,13 @@ gap: 200px;
 .card-producto {
   border-radius: 12px; /* bordes redondeados */
   background: #fff; /* fondo blanco */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12); /* sombra ligera */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); /* sombra ligera */
   overflow: hidden; /* oculta contenido que sobresalga */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* animación suave */
 }
 .card-producto:hover {
   transform: translateY(-5px); /* levanta la tarjeta al pasar el mouse */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* sombra más fuerte en hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* sombra más fuerte en hover */
 }
 
 /* 🔹 IMAGEN DEL PRODUCTO */
@@ -267,14 +257,13 @@ gap: 200px;
   text-align: center; /* texto centrado */
 }
 .prod-nombre {
-  font-size: 1.1em; /* un poco más grande que el texto normal */
-  font-weight: bold; /* negrita */
-  margin: 5px 0; /* espacio arriba y abajo */
+  font-size: 1.1em;
+  margin: 5px 0;
 }
 .prod-desc {
-  font-size: 0.9em; /* más pequeño */
-  color: #555; /* gris */
-  margin-bottom: 12px; /* separa del precio */
+  font-size: 0.9em;
+  color: #555;
+  /margin-bottom: 12px;
 }
 
 /* 🔹 SECCIÓN DE PRECIO */
@@ -303,7 +292,8 @@ gap: 200px;
   justify-content: space-around; /* espacio uniforme entre ellos */
   margin-top: 12px; /* espacio respecto al precio */
 }
-.btn-ver, .btn-comprar {
+.btn-ver,
+.btn-comprar {
   padding: 8px 14px; /* tamaño del botón */
   border: none; /* sin borde */
   border-radius: 6px; /* esquinas redondeadas */
@@ -328,32 +318,32 @@ gap: 200px;
 
 /* 🔹 CONTENEDOR DE LA PAGINACIÓN */
 #pagination {
-  display: flex;              /* los botones se muestran en fila */
-  justify-content: center;    /* centrados en el medio */
-  margin: 30px 0;           
-  gap: 8px;                   
+  display: flex; /* los botones se muestran en fila */
+  justify-content: center; /* centrados en el medio */
+  margin: 30px 0;
+  gap: 8px;
 }
 
 /* 🔹 BOTONES DE PAGINACIÓN */
 #pagination button {
-  padding: 8px 14px;          /* tamaño interno (alto x ancho) */
-  border: none;               /* sin borde por defecto */
-  border-radius: 6px;         /* bordes redondeados */
-  background: #f0f0f0;        /* gris claro */
-  cursor: pointer;            /* cambia cursor a manito */
-  font-weight: bold;          /* texto en negrita */
+  padding: 8px 14px; /* tamaño interno (alto x ancho) */
+  border: none; /* sin borde por defecto */
+  border-radius: 6px; /* bordes redondeados */
+  background: #f0f0f0; /* gris claro */
+  cursor: pointer; /* cambia cursor a manito */
+  font-weight: bold; /* texto en negrita */
   transition: background 0.3s; /* animación suave al pasar el mouse */
 }
 
 /* 🔹 HOVER (cuando paso el mouse) */
 #pagination button:hover {
-  background: #ddd;           /* gris un poco más oscuro */
+  background: #ddd; /* gris un poco más oscuro */
 }
 
 /* 🔹 BOTÓN ACTIVO (la página actual) */
 #pagination button.active {
-  background: #ff6600;        /* naranja para resaltar */
-  color: #fff;                /* texto blanco */
+  background: #ff6600; /* naranja para resaltar */
+  color: #fff; /* texto blanco */
 }
 
 .footer-bottom {
@@ -392,14 +382,14 @@ gap: 200px;
 
 /* 🔹 TARJETA DE PRODUCTO (ajuste de alineación) */
 .card-producto {
-  display: flex;                  /* usamos flexbox */
-  flex-direction: column;         /* elementos en columna (img arriba, texto abajo) */
+  display: flex; /* usamos flexbox */
+  flex-direction: column; /* elementos en columna (img arriba, texto abajo) */
   justify-content: space-between; /* distribuye el contenido para que siempre ocupe toda la tarjeta */
 }
 
 /* 🔹 CUERPO DE LA TARJETA (texto + precio + botones) */
 .card-body {
-  flex-grow: 1;  /* hace que todas las tarjetas tengan la misma altura */
+  flex-grow: 1; /* hace que todas las tarjetas tengan la misma altura */
   display: flex; /* usamos flexbox interno */
   flex-direction: column; /* texto, precio y botones en columna */
   justify-content: space-between; /* reparte para que el precio y botones no se amontonen */
@@ -407,16 +397,16 @@ gap: 200px;
 
 /* 🔹 CONTENEDOR DE LA IMAGEN */
 .card-img {
-  height: 200px;                 /* altura fija para que todas las imágenes ocupen lo mismo */
-  display: flex;                 /* centramos la imagen */
-  align-items: center;           /* centrado vertical */
-  justify-content: center;       /* centrado horizontal */
-  background: #f4f4f4;           /* fondo gris suave (uniformiza espacios vacíos) */
+  height: 200px; /* altura fija para que todas las imágenes ocupen lo mismo */
+  display: flex; /* centramos la imagen */
+  align-items: center; /* centrado vertical */
+  justify-content: center; /* centrado horizontal */
+  background: #f4f4f4; /* fondo gris suave (uniformiza espacios vacíos) */
 }
 
 /* 🔹 IMAGEN DEL PRODUCTO */
 .card-img img {
-  max-height: 100%;              /* nunca sobrepasa el alto del contenedor */
-  max-width: 100%;               /* nunca sobrepasa el ancho */
-  object-fit: contain;           /* mantiene proporción sin recortar */
+  max-height: 100%; /* nunca sobrepasa el alto del contenedor */
+  max-width: 100%; /* nunca sobrepasa el ancho */
+  object-fit: contain; /* mantiene proporción sin recortar */
 }
