@@ -207,7 +207,7 @@ gap: 200px;
 }
 
 #category-banner {
-  width: 100vw;       
+  width: 99.4vw;       
   margin: 0;         
   padding: 0;        
   position: relative; 
@@ -330,8 +330,8 @@ gap: 200px;
 #pagination {
   display: flex;              /* los botones se muestran en fila */
   justify-content: center;    /* centrados en el medio */
-  margin: 30px 0;             /* espacio arriba y abajo */
-  gap: 8px;                   /* separación entre botones */
+  margin: 30px 0;           
+  gap: 8px;                   
 }
 
 /* 🔹 BOTONES DE PAGINACIÓN */

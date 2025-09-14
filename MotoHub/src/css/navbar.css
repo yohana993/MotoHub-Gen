@@ -64,10 +64,9 @@
 
 .carr-user i {
   font-size: 25px;
-  color: #000; /* Unifica color del icono de usuario con el carrito */
+  color: #000;
 }
 
-/* Asegura que el enlace del usuario no herede azul por defecto */
 .carr-user a {
   color: #000;
 }
