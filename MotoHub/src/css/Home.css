@@ -28,18 +28,22 @@ body {
   color: rgba(255, 68, 0, 0.916);
 }
 
+.carrucel-hero {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .hero {
+  flex: 0 0 100%;
   width: 100%;
   height: 600px;
   padding: 80px 20px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
-  background: linear-gradient(
-    180deg,
-    rgba(17, 134, 223, 0.933),
-    rgba(5, 6, 5, 0.748)
-  );
+  background: linear-gradient(180deg, rgba(17, 134, 223, 0.933), #faf8f8);
 }
 .img-hero {
   display: flex;
@@ -97,7 +101,7 @@ body {
   background-color: rgba(255, 255, 255, 0.104);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(10px);
-  color: #ffffff;
+  color: #242424a4;
   border-radius: 20px;
   position: relative;
   z-index: 1;
@@ -128,9 +132,9 @@ body {
   border-radius: 40px;
   border: solid 1px #ffffff;
   cursor: pointer;
-  color: rgb(255, 255, 255);
+  color: #292929;
   font-weight: 400;
-  background-color: #9595951a;
+  background-color: #9595953e;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   font-size: 15px;

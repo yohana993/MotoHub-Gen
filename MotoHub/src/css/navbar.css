@@ -1,5 +1,5 @@
 .seccion-nav {
-  background-color: #ffffff;
+  background-color: #0c0c0c;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,9 +25,9 @@
 
 .seccion-nav .nav-menu li a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.83);
+  color: #ca8717;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
   border: none;
   padding: 12px 16px;
@@ -48,7 +48,7 @@
   background-color: transparent;
   padding: 0;
   border: none;
-  color: black;
+  color: #ca8717;
 }
 
 #btn-user a {
@@ -59,12 +59,12 @@
   background-color: transparent;
   padding: 0;
   border: none;
-  color: black;
+  color: #ca8717;
 }
 
 .carr-user i {
   font-size: 25px;
-  color: #000;
+  color: #ca8717;
 }
 
 .carr-user a {
