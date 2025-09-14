@@ -124,9 +124,11 @@ body {
 
 .categorias {
   padding: 40px 120px;
+  color: rgb(62, 62, 62);
 }
 .categorias h3 {
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 15px;
   font-size: 30px;
 }
 
@@ -136,28 +138,48 @@ body {
   gap: 8px;
   margin-top: 25px;
   gap: 30px;
+  color: rgb(62, 62, 62);
+  margin-top: 60px;
+}
+.fondo-titulo-cat {
+  background-color: #faf8f8;
 }
 
 .cat {
-  background: #ffffff;
+  background-image: url(../assets/images/cascoHomecat.png);
+  background-size: cover;
   width: 250px;
   height: 250px;
   border-radius: 50%;
   box-shadow: 0 2px 5px rgba(67, 66, 66, 0.307);
   margin-top: 30px;
 }
-
-
-.logo-cat {
-  width: 50px;
-  height: auto;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: #fbbe5de1;
+.cat-1 {
+  background-image: url(../assets/images/guantesHomecat.png);
+  background-size: cover;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(67, 66, 66, 0.307);
+  margin-top: 30px;
+}
+.cat-2 {
+  background-image: url(../assets/images/chaquetaHomecat.png);
+  background-size: cover;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(67, 66, 66, 0.307);
+  margin-top: 30px;
+}
+.cat-3 {
+  background-image: url(../assets/images/botasHomecat.png);
+  background-size: cover;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(67, 66, 66, 0.307);
+  margin-top: 30px;
 }
 
 .productos {
@@ -278,7 +300,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Lift effect on hover */
 .footer-col-1:hover,
 .footer-col-2:hover,
 .footer-col-3:hover,
