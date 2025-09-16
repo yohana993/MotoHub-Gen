@@ -33,10 +33,15 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .carrucel-hero {
+    height: 80vh;
+  }
+}
 
 .carrucel-track {
   display: flex;
-  flex-wrap: nowrap; /* evita que las slides bajen de línea */
+  flex-wrap: nowrap;
   width: 100%;
   height: 100%;
   will-change: transform;

@@ -1,4 +1,3 @@
-// 🟢 Normalizar productos (asegura que todos tengan las mismas propiedades)
 function normalizeProduct(p) {
   return {
     id: p.id || Date.now().toString(),
@@ -11,13 +10,13 @@ function normalizeProduct(p) {
   };
 }
 
-// 🟢 Obtener productos desde localStorage
+//  Obtener productos desde localStorage
 function getProducts() {
   const productos = JSON.parse(localStorage.getItem("motohub_products")) || [];
   return productos.map(normalizeProduct);
 }
 
-// 🟢 Mostrar productos en la cuadrícula
+//  Mostrar productos en la cuadrícula
 function loadProductsFromLocalStorage() {
   const productos = getProducts();
 
@@ -57,7 +56,7 @@ function loadProductsFromLocalStorage() {
   });
 }
 
-// 🟢 (Opcional) Insertar productos de prueba si localStorage está vacío
+//  (Opcional) Insertar productos de prueba si localStorage está vacío
 function seedProducts() {
   if (!localStorage.getItem("motohub_products")) {
     const sample = [
@@ -93,8 +92,8 @@ function seedProducts() {
 }
 
 // script de carrucel
-const carrucelHero = document.querySelector('.carrucel-hero');
-const carrucelTrack = document.querySelector('.carrucel-track');
+const carrucelHero = document.querySelector(".carrucel-hero");
+const carrucelTrack = document.querySelector(".carrucel-track");
 // Seleccionar todas las secciones dentro del track, sin importar su clase específica
 const slides = carrucelTrack ? Array.from(carrucelTrack.children) : [];
 
@@ -111,11 +110,11 @@ if (carrucelHero && carrucelTrack && slides.length) {
     });
     carrucelTrack.style.width = `${slideWidth * slides.length}px`;
     // Reposicionar acorde al índice actual
-    carrucelTrack.style.transition = 'none';
+    carrucelTrack.style.transition = "none";
     carrucelTrack.style.transform = `translateX(-${index * slideWidth}px)`;
     // Forzar próximo frame para reactivar la transición
     requestAnimationFrame(() => {
-      carrucelTrack.style.transition = 'transform 0.8s ease-in-out';
+      carrucelTrack.style.transition = "transform 0.8s ease-in-out";
     });
   }
 
@@ -142,12 +141,11 @@ if (carrucelHero && carrucelTrack && slides.length) {
   applySizes();
   startAutoPlay();
 
-  // Recalcular en resize
-  window.addEventListener('resize', () => {
+  window.addEventListener("resize", () => {
     applySizes();
   });
 
   // Opcional: pausa en hover
-  carrucelHero.addEventListener('mouseenter', stopAutoPlay);
-  carrucelHero.addEventListener('mouseleave', startAutoPlay);
+  carrucelHero.addEventListener("mouseenter", stopAutoPlay);
+  carrucelHero.addEventListener("mouseleave", startAutoPlay);
 }
