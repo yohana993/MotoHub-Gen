@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description: p.description || p.descripcion || "",
       category: (p.category || p.categoria || "otro").toLowerCase(),
       price: p.price || p.precio || 0,
-      image: p.image || p.imagen || "/MotoHub/src/assets/images/default.png",
+      image: p.image || p.imagen || "../assets/images/default.png",
       oldPrice: p.oldPrice || p.precioAnterior || null,
     };
   }
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!validCategories.includes(normalized)) normalized = "todo";
 
     const img = document.createElement("img");
-    img.src = `/MotoHub/src/assets/banners/${normalized}.png`;
+    img.src = `../assets/banners/${normalized}.png`;
     img.alt = `Sección ${normalized}`;
     img.classList.add("banner-img");
     bannerContainer.appendChild(img);
