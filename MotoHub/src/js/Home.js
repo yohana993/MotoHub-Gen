@@ -67,7 +67,7 @@ function seedProducts() {
         description: "Casco de alta seguridad",
         category: "cascos",
         price: 300000,
-        image: "/MotoHub/src/assets/images/casco1.png",
+        image: "/assets/images/casco1.png",
       },
       {
         id: 2,
@@ -75,7 +75,7 @@ function seedProducts() {
         description: "Guantes de cuero reforzado",
         category: "accesorios",
         price: 120000,
-        image: "/MotoHub/src/assets/images/guantes1.png",
+        image: "/assets/images/guantes1.png",
       },
       {
         id: 3,
@@ -83,7 +83,7 @@ function seedProducts() {
         description: "Chaqueta impermeable y térmica",
         category: "chaquetas",
         price: 450000,
-        image: "/MotoHub/src/assets/images/chaqueta1.png",
+        image: "/assets/images/chaqueta1.png",
         oldPrice: 500000,
       },
     ];
