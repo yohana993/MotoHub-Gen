@@ -16,9 +16,9 @@ body {
 }
 .carrito {
   right: -100%;
-  z-index: 200; /* por encima del NAV */
+  z-index: 200;
   position: fixed;
-  width: 400px;
+  width: 600px;
   height: 100vh;
   transition: right 0.3s ease;
   box-shadow: -8px 0 24px rgba(0, 0, 0, 0.25);
@@ -80,6 +80,16 @@ body {
   display: flex;
   justify-content: start;
   align-items: end;
+}
+.cantidad-producto input {
+  padding: 5px;
+  width: 50px;
+  border-radius: 20px;
+  border: none;
+}
+
+.eliminar {
+  background-color: transparent;
 }
 
 /* Ancho responsive del panel en móvil */

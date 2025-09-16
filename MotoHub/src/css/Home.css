@@ -140,9 +140,9 @@ body {
   border-radius: 40px;
   border: solid 1px #ffffff;
   cursor: pointer;
-  color: #292929;
+  color: #7f7f7f;
   font-weight: 400;
-  background-color: #9595953e;
+  background-color: #7979792c;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   font-size: 15px;
@@ -254,7 +254,6 @@ body {
     transform: rotateY(0);
   }
 }
-
 
 @keyframes mover-naranja {
   0% {

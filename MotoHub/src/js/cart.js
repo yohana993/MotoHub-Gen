@@ -13,7 +13,7 @@ function abrirCarrito() {
     overlay.style.position = "fixed";
     overlay.style.inset = "0";
     overlay.style.background = "rgba(0,0,0,0.5)";
-    overlay.style.zIndex = "0"; // debajo del panel
+    overlay.style.zIndex = "0";
     overlay.addEventListener("click", cerrarCarritoFn);
   }
   document.body.appendChild(overlay);
