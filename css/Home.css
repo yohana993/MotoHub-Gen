@@ -396,7 +396,7 @@ body {
 }
 
 .cat {
-  background-image: url(../assets/images/cascoHomecat.png);
+  background-image: url(../images/cascoHomecat.png);
   background-size: cover;
   width: 250px;
   height: 250px;
@@ -405,7 +405,7 @@ body {
   margin-top: 30px;
 }
 .cat-1 {
-  background-image: url(../assets/images/guantesHomecat.png);
+  background-image: url(../images/guantesHomecat.png);
   background-size: cover;
   width: 250px;
   height: 250px;
@@ -414,7 +414,7 @@ body {
   margin-top: 30px;
 }
 .cat-2 {
-  background-image: url(../assets/images/chaquetaHomecat.png);
+  background-image: url(../images/chaquetaHomecat.png);
   background-size: cover;
   width: 250px;
   height: 250px;
@@ -423,7 +423,7 @@ body {
   margin-top: 30px;
 }
 .cat-3 {
-  background-image: url(../assets/images/botasHomecat.png);
+  background-image: url(../images/botasHomecat.png);
   background-size: cover;
   width: 250px;
   height: 250px;

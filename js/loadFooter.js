@@ -7,7 +7,7 @@ function loadFooter() {
             <div class="footer-content">
                 <div class="brand-section">
                     <div class="logo">
-                        <img src="../assets/images/Logosinfondo.png" alt="Motohub Logo">
+                        <img src="../images/Logosinfondo.png" alt="Motohub Logo">
                     </div>
                     <p></p>
                 </div>
