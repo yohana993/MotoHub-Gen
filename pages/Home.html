@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Layout</title>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <!-- <link rel="stylesheet" href="../css/base.css" /> -->
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/Home.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/categorias.css" />
+    <link rel="stylesheet" href="../css/carrito.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="carrito">
+      <div class="container_nav">
+        <nav class="nav-carrito">
+          <button class="cerrar-carrito">
+            <i class="fa-light fa-power-off"></i>
+          </button>
+          <div><h4>Carrito de Compras</h4></div>
+        </nav>
+      </div>
+      <div class="contenedor-productos">
+        <div class="card">
+          <img src="../assets/images/moto.png" alt="" />
+          <div class="text-card">
+            <h3>Moto Yamaha</h3>
+            <h4>2.000.000</h4>
+          </div>
+          <div class="cantidad-producto">
+            <input type="number" value="1">
+            <button class="eliminar"><lord-icon
+    src="https://cdn.lordicon.com/kfzfxczd.json"
+    colors="primary:#1F1F1F"
+    trigger="hover"
+    colors="primary:currentColor,secondary:currentColor"
+  style="width:30px;height:30px">
+    
+</lord-icon></button> 
+          </div>
+        </div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
+      <div class="carrito-footer">
+        <div class="total">
+          <span>Total:</span>
+          <strong id="carrito-total-valor">$0</strong>
+        </div>
+        <button id="btn-checkout" class="btn-checkout">Finalizar compra</button>
+      </div>
+    </main>
+    <div class="seccion-nav">
+      <div class="logo">
+        <img src="../assets/images/Logosinfondo.png" alt="Logo MotoHub" />
+      </div>
+      <nav class="navbar">
+        <ul class="nav-menu" id="nav-menu">
+          <li>
+            <a href="#" class="active">Inicio</a>
+          </li>
+          <li>
+            <a href="../pages/categorias.html">Catálogo</a>
+          </li>
+          <li><a href="../pages/Contactenos.html">Contacto</a></li>
+          <li><a href="../pages/acercaNosotros.html">Acerca de</a></li>
+        </ul>
+      </nav>
+      <div class="carr-user">
+        <button id="btn-carrito" href="">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <a href="../pages/login.html"><i class="fa-solid fa-user-tie"></i></a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="carrucel-hero">
+      <div class="carrucel-track">
+        <section class="hero">
+          <div class="seccion-hero">
+            <h2 class="titulo-hero">
+              Equípate para la <strong>Aventura</strong>
+            </h2>
+            <p>
+              Descubre nuestra colección premium de accesorios para
+              motociclistas. Seguridad, estilo y calidad en cada kilómetro.
+            </p>
+            <button id="btn-comprar" class="btn-hero">Comprar ahora</button>
+            <button id="btn-explorar" class="btn-hero">Ver mas</button>
+          </div>
+          <div class="img-hero">
+            <img src="../assets/img_prod/chaqueta_hero_azul.png" alt="" />
+            <img
+              src="../assets/img_prod/espalda_cahqueta_hero_azul.png"
+              alt=""
+            />
+          </div>
+        </section>
+        <section class="hero-2">
+          <div class="seccion-hero">
+            <h2 class="titulo-hero">
+              Equípate para la <strong>Aventura</strong>
+            </h2>
+            <p>
+              Descubre nuestra colección premium de accesorios para
+              motociclistas. Seguridad, estilo y calidad en cada kilómetro.
+            </p>
+            <button id="btn-comprar-2" class="btn-hero"  >Comprar ahora</button>
+            <button id="btn-explorar-2" class="btn-hero" >Ver mas</button>
+          </div>
+          <div class="img-hero-rojo">
+            <img src="../assets/img_prod/zapatos_rojos_hero.png" alt="" />
+          </div>
+        </section>
+        <section class="hero-3">
+          <div class="seccion-hero">
+            <h2 class="titulo-hero">
+              Equípate para la <strong>Aventura</strong>
+            </h2>
+            <p>
+              Descubre nuestra colección premium de accesorios para
+              motociclistas. Seguridad, estilo y calidad en cada kilómetro.
+            </p>
+            <button id="btn-comprar-3" class="btn-hero">Comprar ahora</button>
+            <button id="btn-explorar-3" class="btn-hero">Ver mas</button>
+          </div>
+          <div class="img-hero">
+            <img src="../assets/img_prod/cahqueta_verde_home.png" alt="" />
+          </div>
+        </section>
+        <section class="hero-4">
+          <div class="seccion-hero">
+            <h2 class="titulo-hero">
+              Equípate para la <strong>Aventura</strong>
+            </h2>
+            <p>
+              Descubre nuestra colección premium de accesorios para
+              motociclistas. Seguridad, estilo y calidad en cada kilómetro.
+            </p>
+            <button id="btn-comprar-4" class="btn-hero">Comprar ahora</button>
+            <button id="btn-explorar-4" class="btn-hero">Ver mas</button>
+          </div>
+          <div class="img-hero">
+            <img src="../assets/img_prod/guantes_naranja-home.png" alt="" />
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Categorías -->
+    <section class="categorias">
+      <h3>Categorías Destacadas</h3>
+      <p>
+        Explora nuestra amplia gama de productos especializados para
+        motociclistas
+      </p>
+      <div class="grid-categorias">
+        <div class="cat">
+          <div class="fondo-titulo-cat"><h3>Cascos</h3></div>
+        </div>
+        <div class="cat-1">
+          <div class="fondo-titulo-cat"><h3>Guantes</h3></div>
+        </div>
+        <div class="cat-2">
+          <div class="fondo-titulo-cat"><h3>Chaquetas</h3></div>
+        </div>
+        <div class="cat-3">
+          <div class="fondo-titulo-cat"><h3>Zapatos</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- cards de productos opcionales -->
+
+    <div class="proyectos">
+      <h2>Productos Recomendados</h2>
+      <div class="contenedor-proyectos">
+        <div class="card-proyecto">
+          <img
+            src="../assets/img_prod/cascoHomecat-removebg-preview.png"
+            alt="pokemon"
+          />
+          <div class="text-card-prod">
+            <div class="ver-proyecto">
+              <h3>Casco KTM 300</h3>
+              <button class="btn-comprar">Comprar</button>
+            </div>
+            <!-- <p>Interior acolchado para comodidad y seguridad</p> -->
+            <div class="tecnologias-card">
+              <div class="html">
+                <!-- <p>Categoria: Cascos</p> -->
+              </div>
+              <div class="css">
+                <p>Material de policarbonato y fibra compuesta. </p>
+              </div>
+              <div class="js">
+                <p>precio: $2.000.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-proyecto">
+          <img src="../assets/img_prod/chaquetaMood.png" alt="pokemon" />
+          <div class="text-card-prod">
+            <div class="ver-proyecto">
+              <h3>Chaqueta LS2 Turismo</h3>
+              <button class="btn-comprar">Comprar</button>
+            </div>
+            <!-- <p>Antitraspirable y abrigadora</p> -->
+            <div class="tecnologias-card">
+              <div class="html">
+                <!-- <p>Categoria: Chaquetas</p> -->
+              </div>
+              <div class="css">
+                <p>Protecciones integradas, en hombros codos y espalda.</p>
+              </div>
+              <div class="js">
+                <p>precio: $1.500.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-proyecto">
+          <img src="../assets/img_prod/guanteshomep.png" alt="pokemon"/>
+          <div class="text-card-prod">
+            <div class="ver-proyecto">
+              <h3>Guantes con huella tactil</h3>
+              <button class="btn-comprar">Comprar</button>
+            </div>
+            <!-- <p>Guantes con huella para tactil</p> -->
+            <div class="tecnologias-card">
+              <div class="html">
+                <!-- <p>Categoria: Guantes</p> -->
+              </div>
+              <div class="css">
+                <p>Protecciones integradas en nudillos y muñecas</p>
+              </div>
+              <div class="js">
+                <p>precio: $150.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card-proyecto">
+          <img
+            src="../assets/img_prod/chaqueta_hero_azul.png"
+            alt="pokemon"
+          />
+          <div class="text-card-prod">
+            <div class="ver-proyecto">
+              <h3>Chaqueta RS2 Calle</h3>
+              <button>Comprar</button>
+            </div>
+            <! -- <p>Antitraspirable y abrigadora</p> -->
+            <!-- <div class="tecnologias-card">
+              <div class="html">
+                <p>Categoria: Chaquetas</p>
+              </div>
+              <div class="css">
+                <p>Descripción: Protecciones integradas, en hombros codos y espalda.</p>
+              </div>
+              <div class="js">
+                <p>precio: $500.000</p>
+              </div>
+            </div>
+          </div>
+        </div> --> 
+        <div class="card-proyecto">
+          <img src="../assets/img_prod/zapatos_rojos_hero.png" alt="pokemon" />
+          <div class="text-card-prod">
+            <div class="ver-proyecto">
+              <h3>Tenis de seguridad</h3>
+              <button class="btn-comprar">Comprar</button>
+            </div>
+            <!-- <p>Antitraspirable y abrigadora</p> -->
+            <div class="tecnologias-card">
+              <div class="html">
+                <!-- <p>Categoria: Zapatos</p> -->
+              </div>
+              <div class="css">
+                <p>Protecciónes en tobillo y puntera</p>
+              </div>
+              <div class="js">
+                <p>precio: $300.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-proyecto">
+          <img src="../assets/img_prod/cahqueta_verde_home.png" alt="pokemon" />
+          <div class="text-card-prod">
+            <div class="ver-proyecto">
+              <h3>Chaquetas reflectivas</h3>
+              <button class="btn-comprar">Comprar</button>
+            </div>
+            <!-- <p>Antitraspirable y abrigadora</p> -->
+            <div class="tecnologias-card">
+              <div class="html">
+                <!-- <p>Categoria: Chaquetas</p> -->
+              </div>
+              <div class="css">
+                <p>Chaqueta doble faz, reflectiva, con graduación.</p>
+              </div>
+              <div class="js">
+                <p>precio: $300.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-proyecto">
+          <img src="../assets/img_prod/guantes_naranja-home.png" alt="pokemon" />
+          <div class="text-card-prod">
+            <div class="ver-proyecto">
+              <h3>Guantes con huella tactil</h3>
+              <button class="btn-comprar">Comprar</button>
+            </div>
+            <div class="tecnologias-card">
+              <div class="html">
+                <!-- <p>Categoria: Guantes</p> -->
+              </div>
+              <div class="css">
+                <p>Protecciones integradas en nudillos y muñecas</p>
+              </div>
+              <div class="js">
+                <p>precio: $150.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card-proyecto">
+          <img src="../assets/img_prod/casconegro_home.png" alt="pokemon" />
+          <div class="text-card-prod">
+            <div class="ver-proyecto">
+              <h3>Casco IHC</h3>
+              <button>Comprar</button>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="tecnologias-card">
+              <div class="html">
+                <p>Categoria: Cascos</p>
+              </div>
+              <div class="css">
+                <p>Descripción: Materiales de policarbonato y fibra compuesta. </p>
+              </div>
+              <div class="js">
+                <p>Preioc: $1.500.000</p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- <div class="card-proyecto">
+          <img src="../assets/img_prod/MotoDuke_home.png" alt="pokemon" />
+          <div class="text-card-prod">
+            <div class="ver-proyecto">
+              <h3>Duke RC 200</h3>
+              <button>Comprar</button>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="tecnologias-card">
+              <div class="html">
+                <P>Categoria: Motos Racing</P>
+              </div>
+              <div class="css">
+                <p>Descripción: Agil y versatil, de 199.5 cc2</p>
+              </div>
+              <div class="js">
+                <p>precio: $21.990.000</p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- <div class="card-proyecto">
+          <img src="../assets/img_prod/Ninja.png" alt="pokemon" />
+          <div class="text-card-prod">
+            <div class="ver-proyecto">
+              <h3>Kawasaki Ninja 500</h3>
+              <button>Comprar</button>
+            </div>
+            <div class="tecnologias-card">
+              <div class="html">
+                <P>Categoria: Motos Racing</P>
+              </div>
+              <div class="css">
+                <p>Descripción: Agil y versatil, de 451cc2</p>
+              </div>
+              <div class="js">
+                <p>precio: $38.990.000</p>
+              </div>
+            </div>
+          </div> -->
+    </div>
+
+    <!-- fin card de proyectos -->
+
+    <script src="../js/Home.js"></script>
+    <script src="../js/categorias.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/loadFooter.js"></script>
+  </body>
+</html>

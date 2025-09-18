@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  /* font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif; */
+  color: #222;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.seccion-nav .active ::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background-color: orangered;
+  left: 37.6%;
+  top: 40px;
+  z-index: 0;
+}
+
+/* Asegurar que el nav sticky no cause salto visual entre páginas */
+.seccion-nav[style],
+.seccion-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+@media (max-width: 680px) .seccion-nav {
+  height: 64px;
+  padding: 0 12px;
+}
+.logo img {
+  width: 48px;
+  height: 48px;
+}

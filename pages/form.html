@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <link rel="stylesheet" href="../css/form.css">  
+</head>
+<body class="body-fondo">
+        <img src="../assets/images/Logosinfondo.png"  class="logo" />
+  <section class="register-page">
+    <form id="registroForm">
+      <h2>Registro de Usuario</h2>
+      <input type="text" id="nombre" placeholder="Nombre completo" required>
+      <input type="text" id="telefono" placeholder="Número de teléfono" required>
+      <input type="email" id="email" placeholder="Correo electrónico " required>
+      <div class="password-container">
+        <input type="password" 
+        id="password" 
+        placeholder="Contraseña" required>
+        <img src="../assets/images/password-cerrado.png" alt="" id="pass-icon"
+        class="password-icon"
+        onclick="togglePassword('password')">
+      </div>
+      <div class="password-container">
+        <input type="password" id="confirmPassword" placeholder="Confirmar contraseña" required>
+        <img src="../assets/images/password-cerrado.png" alt="" id="confirm-pass-icon"
+        class="password-icon"
+        onclick="togglePassword('confirmPassword')">
+      </div>
+      <button type="submit">Registrar</button>
+    </form>
+    <div id="mensaje"></div>
+  </section>
+  <div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/form.js"></script>
+</body>
+</html>

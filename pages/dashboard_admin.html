@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="../css/dashboard_admin.css" >
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <title>Dashboard</title>
+</head>
+
+<body>
+    <main>
+        <section class="sidebard">
+            <div class="logo">MotoHub</div>
+             <nav class="nav">
+                 
+               
+               <div class="menu">
+                <a href=""><i class="fa-solid fa-newspaper"></i>
+                     <h4>Ver productos</h4></a>
+                     
+                </div> 
+                <div class="menu">
+                    <a  href=""><i class="fa-solid fa-table-list"></i>
+                     <h4>Ver productos</h4></a>
+                </div>
+                <div class="menu">
+                    <a class="active" href=""><i class="fa-solid fa-trash"></i>
+                     <h4>Ver productos</h4></a>
+                </div>
+                
+            </nav>
+        </div>
+            
+        </section>
+        <div class="container">
+            
+           
+
+        <div class="contenedor-card">
+            <div class="titulo"> <h2>Panel De Administrador</h2>
+                    <p>Panel de administrador de productos</p></div>
+           
+        </div>
+         <article class="card">
+               <div><h3>Sergio Mesa</h3>
+                <p>Desarrollador Backed-End</p>
+            </div>
+               
+               
+            </article>
+
+        <section class="container-form">
+            <div class="form-sec">
+                <h2>Registrar Producto</h2>
+                <form class="form" id="form-producto">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre">
+
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" id="descripcion">
+
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria">
+                        <option value="cascos">Cascos</option>
+                        <option value="chaquetas">Chaquetas/Chalecos</option>
+                        <option value="accesorios">Accesorios</option>
+                        <option value="botas">botas</option>
+                        <option value="motos">Motos</option>
+                    </select>
+
+                    <label for="talla">Talla (si aplica)</label>
+                    <input type="text" id="talla">
+
+                    <label for="precio">Precio</label>
+                    <input type="text" id="precio">
+
+                    <label for="cantidad">Cantidad</label>
+                    <input type="text" id="cantidad">
+
+                    <label for="imagen">Imagen (URL)</label>
+                    <input type="text" id="imagen">
+
+                    <div class="acciones-form">
+                        <button type="button" id="cancelar">Cancelar</button>
+                        <button type="button" id="guardar">Guardar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="previw">
+               
+                <div class="preview-content">
+                    <article>
+                        <img id="imagen_p" src="" alt="Preview producto">
+                        <h3 id="nombre_p">Nombre:</h3>
+                        <h4 id="descripcion_p">Descripción:</h4>
+                        <p id="categoria_p">Categoría:</p>
+                        <p id="talla_p">Talla:</p>
+                        <p id="precio_p">Precio:</p>
+                        <div class="btn"><button class="btn-ver">Ver mas </button>
+                        <button class="btn-comprar">Comprar </button></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="listado-productos">
+            <h2>Productos Guardados</h2>
+            <div id="lista_productos"></div>
+        </section>
+        </div>
+  
+    </main>
+
+    <script src="../js/dashboard_admin.js"></script>
+</body>
+
+</html>
