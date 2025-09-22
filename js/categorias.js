@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!validCategories.includes(normalized)) normalized = "todo";
 
     const img = document.createElement('img');
-    img.src = `/MotoHub/src/assets/banners/${normalized}.png`;
+    img.src = `../banners/${normalized}.png`;
     img.alt = `Sección ${normalized}`;
     img.classList.add('banner-img');
     bannerContainer.appendChild(img);
