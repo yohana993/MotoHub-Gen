@@ -1,4 +1,3 @@
-
 const form = document.getElementById("registroForm");
 const mensaje = document.getElementById("mensaje");
 
@@ -10,10 +9,10 @@ function togglePassword(inputId) {
   
   if (passwordInput.type === 'password') {
     passwordInput.type = 'text';
-    passwordIcon.src = '../images/password-abierto.png'; 
+    passwordIcon.src = '../assets/images/password-abierto.png'; 
   } else {
     passwordInput.type = 'password';
-    passwordIcon.src = '../images/password-cerrado.png'; 
+    passwordIcon.src = '../assets/images/password-cerrado.png'; 
   }
 }
 
@@ -32,77 +31,50 @@ form.addEventListener("submit", function (e) {
       icon: 'warning',
       title: 'Las contraseñas no coinciden',
       text: 'Por favor verifica e inténtalo de nuevo.',
-      confirmButtonText: 'Aceptar',
-      color: '#3b3b3b',
-      confirmButtonColor: '#f25430',
-
-      customClass: {
-      popup: 'swal2-popup-custom',
-      title: 'swal2-title-custom',
-      content: 'swal2-content-custom',
-      confirmButton: 'swal2-confirm-custom'
-    }
+      confirmButtonText: 'Aceptar'
     });
     return;
   }
 
-// Validación de seguridad de la contraseña con caracteres especiales.
-  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&._-])[A-Za-z\d@$!%*?&._-]{8,}$/;
-  if (!passwordRegex.test(password)) {
+  // Objeto que se enviará al backend
+  const usuario = {
+    name: nombre,     //  Los nombres deben coincidir con tu entidad en Spring
+    phone: telefono,
+    email: email,
+    password: password
+  };
+
+  // Enviar datos al backend
+  fetch("http://localhost:8083/user/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(usuario)
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Error en el registro");
+    }
+    return response.json();
+  })
+  .then(data => {
+    Swal.fire({
+      icon: 'success',
+      title: '¡Usuario creado con éxito!',
+      text: 'Tu cuenta fue registrada. Ahora inicia sesión.',
+      confirmButtonText: 'Aceptar'
+    }).then(() => {
+      window.location.href = 'login.html';
+    });
+  })
+  .catch(error => {
     Swal.fire({
       icon: 'error',
-      title: 'Contraseña no válida',
-      text: 'Debe tener mínimo 8 caracteres, incluyendo mayúscula, minúscula, número y un carácter especial.',
-      confirmButtonText: 'Aceptar',
-      color: '#3b3b3b',
-      confirmButtonColor: '#f25430'
+      title: 'Error en el registro',
+      text: 'No se pudo crear el usuario. Inténtalo más tarde.',
+      confirmButtonText: 'Aceptar'
     });
-    return;
-  }  
-
-
-  const usuario = { nombre, telefono, email, password };
-  let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-  // Validación de correo repetido
-  if (usuarios.find(u => u.email === email)) {
-    Swal.fire({
-      icon: 'error',
-      title: 'Este correo ya está registrado',
-      text: 'Intenta iniciar sesión o usa otro correo.',
-      confirmButtonText: 'Aceptar',
-      color: '#3b3b3b',
-      confirmButtonColor: '#f25430',
-
-      customClass: {
-      popup: 'swal2-popup-custom',
-      title: 'swal2-title-custom',
-      content: 'swal2-content-custom',
-      confirmButton: 'swal2-confirm-custom'
-    }
-    });
-    return;
-  }
-
-  usuarios.push(usuario);
-  localStorage.setItem("usuarios", JSON.stringify(usuarios));
-
-  // Modal de éxito y redirección al login al confirmar
-  Swal.fire({
-    icon: 'success',
-    title: '¡Usuario creado con éxito!',
-    text: 'Tu cuenta fue registrada. Ahora inicia sesión.',
-    confirmButtonText: 'Aceptar',
-    color: '#3b3b3b',
-    confirmButtonColor: '#f25430',
-
-    customClass: {
-      popup: 'swal2-popup-custom',
-      title: 'swal2-title-custom',
-      content: 'swal2-content-custom',
-      confirmButton: 'swal2-confirm-custom'
-    }
-  }).then(() => {
-    window.location.href = 'login.html';
+    console.error("Error:", error);
   });
 });
