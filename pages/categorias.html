@@ -16,9 +16,10 @@
   <main class="carrito">
       <div class="container_nav">
         <nav class="nav-carrito">
-          <button class="cerrar-carrito"><i class="fa-light fa-power-off"></i></button>
+          <button class="cerrar-carrito">
+            <i class="fa-light fa-power-off"></i>
+          </button>
           <div><h4>Carrito de Compras</h4></div>
-          
         </nav>
       </div>
       <div class="contenedor-productos">
@@ -26,16 +27,30 @@
           <img src="../assets/images/moto.png" alt="" />
           <div class="text-card">
             <h3>Moto Yamaha</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Blanditiis
-            </p>
             <h4>2.000.000</h4>
+          </div>
+          <div class="cantidad-producto">
+            <input type="number" value="1">
+            <button class="eliminar"><lord-icon
+    src="https://cdn.lordicon.com/kfzfxczd.json"
+    colors="primary:#1F1F1F"
+    trigger="hover"
+    colors="primary:currentColor,secondary:currentColor"
+  style="width:30px;height:30px">
+    
+</lord-icon></button> 
           </div>
         </div>
         <div class="card"></div>
         <div class="card"></div>
         <div class="card"></div>
+      </div>
+      <div class="carrito-footer">
+        <div class="total">
+          <span>Total:</span>
+          <strong id="carrito-total-valor">$0</strong>
+        </div>
+        <button id="btn-checkout" class="btn-checkout">Finalizar compra</button>
       </div>
     </main>
     <div class="seccion-nav">
@@ -61,7 +76,7 @@
     </div>
 
     <section class="banner-video">
-      <img src="../images/chat.png" alt="Todas" />
+      <img src="../images/categoriaMotoHub.png" alt="Todas" />
     </section>
   <section class="categorias">
   

@@ -1,3 +1,14 @@
+:root {
+    --celeste: #75C6CF; 
+    --amarillo: #F9B02F; 
+    --naranja: #F25430; 
+    --gris-fondo: #f6f7f9;
+    --gris-borde: #e5e7eb; 
+    --gris-texto: #3b3b3b;
+    --gris-suave: #6b7280;
+    --fuente: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
 /* Estilos del footer */
 footer {
   background-color: #0c0c0c;
@@ -72,7 +83,7 @@ footer {
 }
 
 .footer-section a {
-  color: #faa61a;
+  color: var(--amarillo);
   text-decoration: none;
   transition: opacity 0.3s;
 }
@@ -83,7 +94,7 @@ footer {
 
 /* Información de contacto */
 .contact-info p {
-  color: #faa61a;
+  color: var(--amarillo);
   margin-bottom: 5px;
   display: flex;
   justify-content: flex-start;

@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     icon: 'warning',
                     title: 'Nombre requerido',
                     text: 'Por favor ingresa tu nombre completo.',
+                    confirmButtonColor: '#f25430',
                     confirmButtonText: 'Aceptar'
                 });
                 return;
@@ -30,7 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     icon: 'warning',
                     title: 'Correo inválido',
                     text: 'Por favor ingresa un correo electrónico válido.',
-                    confirmButtonText: 'Aceptar'
+                    confirmButtonColor: '#f25430',
+                    confirmButtonText: 'Aceptar',
+
+                    customClass: {
+                    popup: 'swal2-popup-custom',
+                    title: 'swal2-title-custom',
+                    content: 'swal2-content-custom',
+                    confirmButton: 'swal2-confirm-custom'
+                }
                 });
                 return;
             }
@@ -40,7 +49,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     icon: 'warning',
                     title: 'Mensaje muy corto',
                     text: 'Por favor escribe un mensaje de al menos 10 caracteres.',
-                    confirmButtonText: 'Aceptar'
+                    confirmButtonColor: '#f25430',
+                    confirmButtonText: 'Aceptar',
+
+                    customClass: {
+                    popup: 'swal2-popup-custom',
+                    title: 'swal2-title-custom',
+                    content: 'swal2-content-custom',
+                    confirmButton: 'swal2-confirm-custom'
+                }
                 });
                 return;
             }
@@ -51,7 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: '¡Correo enviado!',
                 text: 'Tu mensaje fue enviado correctamente. Pronto te contactaremos.',
                 confirmButtonText: 'Aceptar',
-                confirmButtonColor: '#6c5ce7',
+                confirmButtonColor: '#75C6CF',
+
                 customClass: {
                     popup: 'swal2-popup-custom',
                     title: 'swal2-title-custom',

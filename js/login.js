@@ -12,10 +12,10 @@ function togglePassword(inputId) {
   
   if (passwordInput.type === 'password') {
     passwordInput.type = 'text';
-    passwordIcon.src = '../assets/images/password-abierto.png'; 
+    passwordIcon.src = '../images/password-abierto.png'; 
   } else {
     passwordInput.type = 'password';
-    passwordIcon.src = '../assets/images/password-cerrado.png'; 
+    passwordIcon.src = '../images/password-cerrado.png'; 
   }
 }
 

@@ -1,14 +1,12 @@
 :root {
-  --rojo: #f24150;
-  --celeste: #75c6cf;
-  --verde: #39ab4a;
-  --amarillo: #f9b02f;
-  --naranja: #f25430;
-  --gris-fondo: #f6f7f9;
-  --gris-borde: #e5e7eb;
-  --gris-texto: #3b3b3b;
-  --gris-suave: #6b7280;
-  --fuente: "Segoe UI", "Roboto", Arial, sans-serif;
+  --celeste: #75C6CF; 
+    --amarillo: #F9B02F; 
+    --naranja: #F25430; 
+    --gris-fondo: #f6f7f9;
+    --gris-borde: #e5e7eb; 
+    --gris-texto: #3b3b3b;
+    --gris-suave: #6b7280;
+    --fuente: 'Segoe UI', 'Roboto', Arial, sans-serif;
 }
 
 .body-fondo {
@@ -47,6 +45,7 @@ section.register-page {
 }
 
 #registroForm {
+  font-family: var(--fuente);
   width: 100%;
   max-width: 360px;
   background: rgba(255, 255, 255, 0.1);

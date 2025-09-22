@@ -1,11 +1,9 @@
 :root {
-    --rojo: #F24150;
-    --celeste: #75C6CF;
-    --verde: #39AB4A;
-    --amarillo: #F9B02F;
-    --naranja: #F25430;
+    --celeste: #75C6CF; 
+    --amarillo: #F9B02F; 
+    --naranja: #F25430; 
     --gris-fondo: #f6f7f9;
-    --gris-borde: #e5e7eb;
+    --gris-borde: #e5e7eb; 
     --gris-texto: #3b3b3b;
     --gris-suave: #6b7280;
     --fuente: 'Segoe UI', 'Roboto', Arial, sans-serif;

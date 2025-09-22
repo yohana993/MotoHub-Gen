@@ -10,10 +10,10 @@ function togglePassword(inputId) {
   
   if (passwordInput.type === 'password') {
     passwordInput.type = 'text';
-    passwordIcon.src = '../assets/images/password-abierto.png'; 
+    passwordIcon.src = '../images/password-abierto.png'; 
   } else {
     passwordInput.type = 'password';
-    passwordIcon.src = '../assets/images/password-cerrado.png'; 
+    passwordIcon.src = '../images/password-cerrado.png'; 
   }
 }
 
@@ -35,9 +35,31 @@ form.addEventListener("submit", function (e) {
       confirmButtonText: 'Aceptar',
       color: '#3b3b3b',
       confirmButtonColor: '#f25430',
+
+      customClass: {
+      popup: 'swal2-popup-custom',
+      title: 'swal2-title-custom',
+      content: 'swal2-content-custom',
+      confirmButton: 'swal2-confirm-custom'
+    }
     });
     return;
   }
+
+// Validación de seguridad de la contraseña con caracteres especiales.
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&._-])[A-Za-z\d@$!%*?&._-]{8,}$/;
+  if (!passwordRegex.test(password)) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Contraseña no válida',
+      text: 'Debe tener mínimo 8 caracteres, incluyendo mayúscula, minúscula, número y un carácter especial.',
+      confirmButtonText: 'Aceptar',
+      color: '#3b3b3b',
+      confirmButtonColor: '#f25430'
+    });
+    return;
+  }  
+
 
   const usuario = { nombre, telefono, email, password };
   let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
@@ -51,6 +73,13 @@ form.addEventListener("submit", function (e) {
       confirmButtonText: 'Aceptar',
       color: '#3b3b3b',
       confirmButtonColor: '#f25430',
+
+      customClass: {
+      popup: 'swal2-popup-custom',
+      title: 'swal2-title-custom',
+      content: 'swal2-content-custom',
+      confirmButton: 'swal2-confirm-custom'
+    }
     });
     return;
   }
@@ -66,6 +95,13 @@ form.addEventListener("submit", function (e) {
     confirmButtonText: 'Aceptar',
     color: '#3b3b3b',
     confirmButtonColor: '#f25430',
+
+    customClass: {
+      popup: 'swal2-popup-custom',
+      title: 'swal2-title-custom',
+      content: 'swal2-content-custom',
+      confirmButton: 'swal2-confirm-custom'
+    }
   }).then(() => {
     window.location.href = 'login.html';
   });

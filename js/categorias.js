@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         </div>
         <div class="acciones">
-          <button class="btn-ver">Ver más</button>
           <button class="btn-comprar">Comprar</button>
         </div>
       </div>
@@ -74,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!validCategories.includes(normalized)) normalized = "todo";
 
     const img = document.createElement("img");
-    img.src = `../assets/banners/${normalized}.png`;
+    img.src = `../banners/${normalized}.png`;
     img.alt = `Sección ${normalized}`;
     img.classList.add("banner-img");
     bannerContainer.appendChild(img);

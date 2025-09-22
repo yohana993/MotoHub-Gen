@@ -25,6 +25,8 @@ imagen.addEventListener("input", () => imagen_p.src = imagen.value);
 
 // Guardar en localStorage
 bt_guardar.addEventListener("click", () => {
+    const confirmarGuardar = confirm("¿Desea guardar el producto?");
+    if (!confirmarGuardar)return;
     const producto = {
         imagen: imagen.value,
         nombre: nombre.value,
@@ -48,6 +50,8 @@ bt_guardar.addEventListener("click", () => {
 
 // Cancelar (resetear)
 bt_cancelar.addEventListener("click", () => {
+    const confirmarCancelar = confirm("¿Desea cancelar? Se borraran los datos ingresados.");
+    if (!confirmarCancelar)return;
     document.getElementById("form-producto").reset();
     imagen_p.src = "../assets/images/Logosinfondo.png";
     nombre_p.textContent = "Nombre:";

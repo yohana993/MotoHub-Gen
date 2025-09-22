@@ -4,53 +4,51 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="../css/dashboard_admin.css" >
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-   <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard_admin.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Dashboard</title>
 </head>
 
 <body>
     <main>
         <section class="sidebard">
-            <div class="logo">MotoHub</div>
-             <nav class="nav">
-                 
-               
-               <div class="menu">
+                    <div class="logo"><img src="../images/Logosinfondo.png" alt=""></div>
+            <nav class="nav">
+                <div class="contenedor-card">
+            <div class="titulo"> <h2>Bienvenido!!!</h2>
+                <p>Panel de administrador</p></div>
+            </div>
+            <article class="card">
+                <div><h3>Sergio Mesa</h3>
+                <p>Desarrollador Backed-End</p>
+            </div>
+            </article>
+                <!-- <div class="menu">
                 <a href=""><i class="fa-solid fa-newspaper"></i>
-                     <h4>Ver productos</h4></a>
-                     
+                    <h4>Ver productos</h4></a>
                 </div> 
                 <div class="menu">
                     <a  href=""><i class="fa-solid fa-table-list"></i>
-                     <h4>Ver productos</h4></a>
+                    <h4>Ver productos</h4></a>
                 </div>
                 <div class="menu">
                     <a class="active" href=""><i class="fa-solid fa-trash"></i>
-                     <h4>Ver productos</h4></a>
-                </div>
+                    <h4>Ver productos</h4></a>
+                </div> -->
                 
             </nav>
         </div>
-            
         </section>
         <div class="container">
-            
-           
-
-        <div class="contenedor-card">
-            <div class="titulo"> <h2>Panel De Administrador</h2>
-                    <p>Panel de administrador de productos</p></div>
-           
-        </div>
-         <article class="card">
+        <!-- <div class="contenedor-card">
+            <div class="titulo"> <h2>Bienvenido!!!</h2>
+                    <p>Panel de administrador</p></div>
+        </div> -->
+         <!-- <article class="card">
                <div><h3>Sergio Mesa</h3>
                 <p>Desarrollador Backed-End</p>
             </div>
-               
-               
-            </article>
-
+            </article> -->
         <section class="container-form">
             <div class="form-sec">
                 <h2>Registrar Producto</h2>
@@ -83,14 +81,12 @@
                     <input type="text" id="imagen">
 
                     <div class="acciones-form">
-                        <button type="button" id="cancelar">Cancelar</button>
-                        <button type="button" id="guardar">Guardar</button>
+                        <button type="button" id="cancelar" class="btn-cancelar">Cancelar</button> 
+                        <button type="button" id="guardar" class="btn-guardar">Guardar</button>
                     </div>
                 </form>
             </div>
-
             <div class="previw">
-               
                 <div class="preview-content">
                     <article>
                         <img id="imagen_p" src="" alt="Preview producto">
@@ -99,19 +95,17 @@
                         <p id="categoria_p">Categoría:</p>
                         <p id="talla_p">Talla:</p>
                         <p id="precio_p">Precio:</p>
-                        <div class="btn"><button class="btn-ver">Ver mas </button>
-                        <button class="btn-comprar">Comprar </button></div>
+                        <div class="btn"><button class="btn-comprar">Comprar </button>
+                        <!-- <button class="btn-comprar">Comprar </button></div> -->
                     </article>
                 </div>
             </div>
         </section>
-
-        <section class="listado-productos">
+        <!-- <section class="listado-productos">
             <h2>Productos Guardados</h2>
             <div id="lista_productos"></div>
-        </section>
+        </section> -->
         </div>
-  
     </main>
 
     <script src="../js/dashboard_admin.js"></script>

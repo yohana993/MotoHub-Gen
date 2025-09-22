@@ -1,14 +1,12 @@
 :root {
-  --rojo: #f24150;
-  --celeste: #75c6cf;
-  --verde: #39ab4a;
-  --amarillo: #f9b02f;
-  --naranja: #f25430;
-  --gris-fondo: #f6f7f9;
-  --gris-borde: #e5e7eb;
-  --gris-texto: #3b3b3b;
-  --gris-suave: #6b7280;
-  --fuente: "Segoe UI", "Roboto", Arial, sans-serif;
+    --celeste: #75C6CF; 
+    --amarillo: #F9B02F; 
+    --naranja: #F25430; 
+    --gris-fondo: #f6f7f9;
+    --gris-borde: #e5e7eb; 
+    --gris-texto: #3b3b3b;
+    --gris-suave: #6b7280;
+    --fuente: 'Segoe UI', 'Roboto', Arial, sans-serif;
 }
 .body-fondo {
   height: 100vh;
@@ -39,7 +37,7 @@ section.login-page {
 }
 .login-page h2 {
   color: white;
-  font-family: var(--fuente) "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: var(--fuente)
 }
 .login-page p {
   color: rgba(255, 255, 255, 0.534);
@@ -59,6 +57,7 @@ section.login-page {
 }
 
 h2 {
+  font-family: var(--fuente);
   text-align: center;
   margin-top: 0;
   margin-bottom: 30px;
