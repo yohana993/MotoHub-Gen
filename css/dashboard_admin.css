@@ -91,7 +91,7 @@ nav {
   padding: 15px;
   border-radius: 10px;
   border: none;
-  color: #f0f0f0;
+  color: black;
 }
 .form input {
   padding: 8px;
@@ -135,18 +135,18 @@ nav {
 
 .acciones-form {
   display: flex;
-  gap: 170px; 
+  gap: 100px; 
   margin-top: 10px;
 }
 
 .btn-guardar {
-  background-color: green; 
+  background-color: var(--amarillo); 
   color: white;
 
 }
 
 .btn-cancelar {
-  background-color: red; 
+  background-color: var(--naranja); 
   color: white;
 }
 

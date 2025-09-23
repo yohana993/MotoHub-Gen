@@ -9,10 +9,10 @@ function togglePassword(inputId) {
 
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
-    passwordIcon.src = "../assets/images/password-abierto.png";
+    passwordIcon.src = "../images/password-abierto.png";
   } else {
     passwordInput.type = "password";
-    passwordIcon.src = "../assets/images/password-cerrado.png";
+    passwordIcon.src = "../images/password-cerrado.png";
   }
 }
 
@@ -88,6 +88,8 @@ form.addEventListener("submit", function (e) {
         title: "¡Usuario creado con éxito!",
         text: "Tu cuenta fue registrada. Ahora inicia sesión.",
         confirmButtonText: "Aceptar",
+        color: "#3b3b3b",
+        confirmButtonColor: "#f25430",
       }).then(() => {
         window.location.href = "login.html";
       });

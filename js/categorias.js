@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentPage = 1;
   let allProducts = [];
 
-  // ================================
-  // 🟢 Normalizar productos
-  // ================================
+  //  Normalizar productos
+
   function normalizeProduct(p) {
     return {
       id: p.id || Date.now().toString(),
@@ -23,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
-  // ================================
-  // 🟢 Obtener productos desde API
-  // ================================
+
+  // Obtener productos desde API
+
   async function fetchProducts() {
     const response = await fetch('http://localhost:8083/products');
     if (!response.ok) throw new Error('Error al obtener productos del servidor');
@@ -33,9 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     return data.map(normalizeProduct);
   }
 
-  // ================================
-  // 🟢 Mostrar tarjeta de producto
-  // ================================
+  //  Mostrar tarjeta de producto
+
   function displayProduct(product) {
     const productCard = document.createElement('div');
     productCard.classList.add('card-producto');
@@ -51,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
           ${product.oldPrice ? `<span class="precio-anterior">$${product.oldPrice}</span>` : ""}
         </div>
         <div class="acciones">
-          <button class="btn-ver">Ver más</button>
           <button class="btn-comprar">Comprar</button>
         </div>
       </div>
@@ -59,9 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     productGrid.appendChild(productCard);
   }
 
-  // ================================
-  // 🟢 Banner dinámico por categoría
-  // ================================
+  // Banner dinámico por categoría
+
   function showCategoryBanner(category) {
     const bannerContainer = document.getElementById('category-banner');
     if (!bannerContainer) return;
@@ -72,15 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!validCategories.includes(normalized)) normalized = "todo";
 
     const img = document.createElement('img');
-    img.src = `/MotoHub/src/assets/banners/${normalized}.png`;
+    img.src = `../banners/${normalized}.png`;
     img.alt = `Sección ${normalized}`;
     img.classList.add('banner-img');
     bannerContainer.appendChild(img);
   }
 
-  // ================================
-  // 🟢 Renderizar productos de la página actual
-  // ================================
+  //  Renderizar productos de la página actual
+
   function renderPage(page, category = "todo") {
     currentPage = page;
     productGrid.innerHTML = "";
@@ -103,9 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
     renderPagination(filtered.length, category);
   }
 
-  // ================================
-  // 🟢 Renderizar botones de paginación
-  // ================================
+  // Renderizar botones de paginación
+ 
   function renderPagination(totalProducts, category) {
     const totalPages = Math.ceil(totalProducts / PRODUCTS_PER_PAGE) || 1;
     paginationContainer.innerHTML = "";
@@ -136,9 +130,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ================================
-  // 🟢 Enlaces de categorías
-  // ================================
+
+  // Enlaces de categorías
+
   document.querySelectorAll('#category-list a').forEach(link => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
@@ -147,9 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ================================
-  // 🚀 Inicialización
-  // ================================
+  // Inicialización
+
   (async () => {
     allProducts = await fetchProducts(); // <-- Solo GET al backend
     renderPage(1, "todo");

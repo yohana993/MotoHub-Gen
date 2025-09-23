@@ -10,10 +10,10 @@ function togglePassword(inputId) {
   
   if (passwordInput.type === 'password') {
     passwordInput.type = 'text';
-    passwordIcon.src = '../assets/images/password-abierto.png'; 
+    passwordIcon.src = '../images/password-abierto.png'; 
   } else {
     passwordInput.type = 'password';
-    passwordIcon.src = '../assets/images/password-cerrado.png'; 
+    passwordIcon.src = '../images/password-cerrado.png'; 
   }
 }
 
@@ -42,9 +42,9 @@ form.addEventListener("submit", function (e) {
     }
     return response.text().then(text => {
       try {
-        return JSON.parse(text); // ✅ si backend manda JSON
+        return JSON.parse(text); //  si backend manda JSON
       } catch (e) {
-        return { message: text }; // ✅ si backend manda texto
+        return { message: text }; //  si backend manda texto
       }
     });
   })
